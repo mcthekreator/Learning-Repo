@@ -54,13 +54,13 @@
 
 
 
-// function derrick(hello){
-//     hello("Hello")
-// }
+function derrick(hello){
+    hello("Hello")
+}
 
-// function helloFunc (word){
-//     console.log("Hello" + word)
-// }
+function helloFunc (word){
+    console.log("Hello" + word)
+}
 
 // derrick(helloFunc);
 
