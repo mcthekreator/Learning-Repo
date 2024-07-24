@@ -54,22 +54,26 @@
 
 
 
-function derrick(hello){
-    hello("Hello")
-}
+// function derrick(hello){
+//     hello("Hello")
+// }
 
-function helloFunc (word){
-    console.log("Hello" + word)
-}
+// function helloFunc (word){
+//     console.log("Hello" + word)
+// }
 
-derrick(helloFunc);
+// derrick(helloFunc);
 
-let promise1 = Promise.resolve(3);
-let promise2 = 42;
-let promise3 = new Promise((resolve, reject) => {
-  setTimeout(resolve, 100, 'foo');
-});
+// let promise1 = Promise.resolve(3);
+// let promise2 = 42;
+// let promise3 = new Promise((resolve, reject) => {
+//   setTimeout(resolve, 100, 'foo');
+// });
 
-Promise.all([promise1, promise2, promise3]).then(values => {
-  console.log(values); // [3, 42, "foo"]
-});
+// Promise.all([promise1, promise2, promise3]).then(values => {
+//   console.log(values); // [3, 42, "foo"]
+// });
+
+
+
+let name = "Hello"
