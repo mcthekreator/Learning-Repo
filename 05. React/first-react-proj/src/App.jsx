@@ -5,7 +5,7 @@ import "./components/home/home"
 function App() {
   return (
     <>
-     <Home></Home>
+    <Home/>
     </>
   );
 }
