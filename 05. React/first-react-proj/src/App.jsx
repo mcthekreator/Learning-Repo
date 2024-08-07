@@ -1,11 +1,11 @@
 import "./App.css";
 import "./components/navbar/navbar"
-import "./components/home/home"
+import Hello from "./components/home/home"
 
 function App() {
   return (
     <>
-    <Home/>
+    <Hello/>
     </>
   );
 }

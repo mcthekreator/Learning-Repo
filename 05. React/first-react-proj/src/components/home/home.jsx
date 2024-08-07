@@ -1,4 +1,11 @@
-<section>
-    <h3>Body</h3>
-    <h1>Hello World</h1>
-</section>
+
+function Home() {
+    const hello = " My name is Richard"
+  return (
+    <div>
+      <h3>{hello}</h3>
+    </div>
+  )
+}
+
+export default Home
