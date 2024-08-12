@@ -1,7 +1,8 @@
-function Hello() {
+function Hello(props) {
   return (
     <>
-      <h1> This is a new componenet</h1>
+      <h1> Hello {props.name}</h1>
+      <p>{props.message}</p>
     </>
   );
 }
