@@ -1,8 +1,11 @@
-function Hello(props) {
+function Hello({ name, message, person }) {
   return (
     <>
-      <h1> Hello {props.name}</h1>
-      <p>{props.message}</p>
+      <h1> Hello {name}</h1>
+      <p>{message}</p>
+      <p>
+        {person.name}, {person.message}, {person.seatNumbers}
+      </p>
     </>
   );
 }

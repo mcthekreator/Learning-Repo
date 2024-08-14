@@ -1,13 +1,16 @@
 import Hello from "./components/Hello";
 
 function App() {
-  const mymessage = "I am a frontend developer"
+  const person = {
+    name: "Rob",
+    message: "Hi there",
+    seatNumbers: [1, 4, 7],
+  };
   return (
     <>
-      <Hello name="Derrick" message={mymessage}/>
+      <Hello name="Derrick" message="Hi ther" person={person} />
     </>
   );
 }
 
 export default App;
- 
