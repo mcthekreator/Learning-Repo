@@ -20,8 +20,13 @@
 # #     elif a == b:
 # #         print("a and b are equal")
 
-student_count = 100 
-rating = 4.99
-is_published = False
-course_name = """ Mulitple Lines """
-print(course_name)
+# student_count = 100 
+# rating = 4.99
+# is_published = False
+# course_name = """ Mulitple Lines """
+# print(type(course_name))
+
+# Dynamic Typing
+age: int = 30
+age = "Python"
+print (age)
