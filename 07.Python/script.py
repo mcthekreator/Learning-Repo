@@ -57,12 +57,21 @@
 # print (course[0:3])
 
 # Escape Sequence
-message = "python \" Programming"
-print(message)
-message = "python \n Programming"
-print(message)
-message = """python
-Programming
-Tutorials
-"""
-print(message)
+# message = "python \" Programming"
+# print(message)
+# message = "python \n Programming"
+# print(message)
+# message = """python
+# Programming
+# Tutorials
+# """
+# print(message)
+
+# Formatting strings
+
+# name = "John"
+first = "Richard"
+last = "McAdams"
+full = f"{first} {last}"
+full = f"{len(first)} {2 + 2}"
+print (full)
