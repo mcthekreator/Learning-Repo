@@ -70,8 +70,54 @@
 # Formatting strings
 
 # name = "John"
-first = "Richard"
-last = "McAdams"
-full = f"{first} {last}"
-full = f"{len(first)} {2 + 2}"
-print (full)
+# first = "Richard"
+# last = "McAdams"
+# full = f"{first} {last}"
+# full = f"{len(first)} {2 + 2}"
+# print (full)
+
+#  string methods
+course = "Python protgramming"
+print (course.upper())
+print(course.lower())
+print (course.title())
+print(course.strip())
+print(course.rstrip()) # removes white pace on right 
+print(course.lstrip()) #remove white space on left
+print (course.find("pro")) #find index of pro
+print (course.replace("P", "_"))
+print ("Programming " in course) 
+print ("Programming " not in course)
+
+    
+
+
+
+
+
+
+
+
+
+
+
+
+def split_by_null(arr):
+    result = []
+    current_subarray = []
+    for item in arr:
+        if item is None:
+            if current_subarray:
+                result.append(current_subarray)
+                current_subarray = []
+        else:
+            current_subarray.append(item)
+    
+    if current_subarray:
+        result.append(current_subarray)
+    
+    return result
+
+input_array = [1, 2,4, None, 3, 4, None, 5]
+output = split_by_null(input_array)
+print(output)
