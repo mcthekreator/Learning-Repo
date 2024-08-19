@@ -44,9 +44,25 @@
 # print(id(x))
 
 # Strings
-print("Enter first name")
-first_name = input()
-print("Enter second name")
-second_name = input()
-print("Your name is " + first_name + " " + second_name)
+# print("Enter first name")
+# first_name = input()
+# print("Enter second name")
+# second_name = input()
+# print("Your name is " + first_name + " " + second_name)
+# print(len(first_name) + len(second_name))
+# course = "Python Programming"
+# print (len(course))
+# print (course[0])
+# print (course[-2])
+# print (course[0:3])
 
+# Escape Sequence
+message = "python \" Programming"
+print(message)
+message = "python \n Programming"
+print(message)
+message = """python
+Programming
+Tutorials
+"""
+print(message)
