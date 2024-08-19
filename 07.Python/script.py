@@ -20,22 +20,28 @@
 # #     elif a == b:
 # #         print("a and b are equal")
 
-# student_count = 100 
+# student_count = 100
 # rating = 4.99
 # is_published = False
 # course_name = """ Mulitple Lines """
 # print(type(course_name))
 
-# Dynamic Typing
-age: int = 30
-age = "Python"
-print (age)
+# # Dynamic Typing
+# age: int = 30
+# age = "Python"
+# print(age)
 
-# Mutable and immutables 
-x = [1, 2, 3,]
-print(id(x))
+# # Mutable and immutables
+# x = [1, 2, 3,]
+# print(id(x))
 
-x.append(4)
-print(id(x))
+# x.append(4)
+# print(id(x))
 
 # Strings
+print("Enter first name")
+first_name = input()
+print("Enter second name")
+second_name = input()
+print("Your name is " + first_name + " " + second_name)
+
