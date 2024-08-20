@@ -17,8 +17,4 @@ function splitIntoMulitpleSubArrays(arr) {
   }
   return mainArray;
 }
-
-
-
-
 const myArray = [1, 2, null, 3, null, null, 5];
