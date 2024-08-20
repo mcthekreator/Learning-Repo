@@ -112,9 +112,13 @@ print(round(PI))
 print (abs(PI))
 print(math.floor(PI))
 
-
-    
-
+# Type Conversion
+   
+x = input("x: ")
+Y = x + 1
+print(int(x))
+print(float(x))
+print(bool(x))
 
 
 
