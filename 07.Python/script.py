@@ -89,6 +89,23 @@ print (course.replace("P", "_"))
 print ("Programming " in course) 
 print ("Programming " not in course)
 
+ 
+ 
+ 
+# Numbers
+x = 10 + 3
+x = 10 - 3
+x = 10 * 3
+x = 10 / 3
+x = 10 // 3
+x = 10 % 3
+x = 10 ** 3
+
+x= x + 1
+x += 1 #Agumentmented assignment operator
+print(x)
+
+
     
 
 
