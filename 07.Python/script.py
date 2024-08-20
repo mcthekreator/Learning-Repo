@@ -77,66 +77,75 @@
 # print (full)
 
 #  string methods
-import math
-course = "Python protgramming"
-print(course.upper())
-print(course.lower())
-print(course.title())
-print(course.strip())
-print(course.rstrip())  # removes white pace on right
-print(course.lstrip())  # remove white space on left
-print(course.find("pro"))  # find index of pro
-print(course.replace("P", "_"))
-print("Programming " in course)
-print("Programming " not in course)
+# import math
+# course = "Python protgramming"
+# print(course.upper())
+# print(course.lower())
+# print(course.title())
+# print(course.strip())
+# print(course.rstrip())  # removes white pace on right
+# print(course.lstrip())  # remove white space on left
+# print(course.find("pro"))  # find index of pro
+# print(course.replace("P", "_"))
+# print("Programming " in course)
+# print("Programming " not in course)
 
 
-# Numbers
-x = 10 + 3
-x = 10 - 3
-x = 10 * 3
-x = 10 / 3
-x = 10 // 3
-x = 10 % 3
-x = 10 ** 3
+# # Numbers
+# x = 10 + 3
+# x = 10 - 3
+# x = 10 * 3
+# x = 10 / 3
+# x = 10 // 3
+# x = 10 % 3
+# x = 10 ** 3
 
-x = x + 1
-x += 1  # Agumentmented assignment operator
-print(x)
+# x = x + 1
+# x += 1  # Agumentmented assignment operator
+# print(x)
 
-# Number Methods
-PI = -3.14
-print(round(PI))
-print(abs(PI))
-print(math.floor(PI))
+# # Number Methods
+# PI = -3.14
+# print(round(PI))
+# print(abs(PI))
+# print(math.floor(PI))
 
-# Type Conversion
+# # Type Conversion
 
-x = input("x: ")
-Y = x + 1
-print(int(x))
-print(float(x))
-print(bool(x))
+# x = input("x: ")
+# Y = x + 1
+# print(int(x))
+# print(float(x))
+# print(bool(x))
 
 
 # Conditional statments
-def split_by_null(arr):
-    result = []
-    current_subarray = []
-    for item in arr:
-        if item is None:
-            if current_subarray:
-                result.append(current_subarray)
-                current_subarray = []
-        else:
-            current_subarray.append(item)
-
-    if current_subarray:
-        result.append(current_subarray)
-
-    return result
+temprature = 15
+if temprature > 30:
+    print(" Its warn")
+    print(" Drintk water")
+elif temprature < 30:
+    print("Its cold")    
+print("Done")
 
 
-input_array = [1, 2, 4, None, 3, 4, None, 5]
-output = split_by_null(input_array)
-print(output)
+# def split_by_null(arr):
+#     result = []
+#     current_subarray = []
+#     for item in arr:
+#         if item is None:
+#             if current_subarray:
+#                 result.append(current_subarray)
+#                 current_subarray = []
+#         else:
+#             current_subarray.append(item)
+
+#     if current_subarray:
+#         result.append(current_subarray)
+
+#     return result
+
+
+# input_array = [1, 2, 4, None, 3, 4, None, 5]
+# output = split_by_null(input_array)
+# print(output)
