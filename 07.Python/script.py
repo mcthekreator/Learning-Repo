@@ -121,12 +121,17 @@
 
 # Conditional statments
 temprature = 15
-if temprature > 30:
-    print(" Its warn")
-    print(" Drintk water")
-elif temprature < 30:
-    print("Its cold")    
-print("Done")
+# if temprature > 30:
+#     print(" Its warn")
+#     print(" Drintk water")
+# elif temprature < 30:
+#     print("Its cold")
+# print("Done")
+
+# Ternary Operator
+
+message = "is warn" if temprature < 30 else "is code"
+print(message)
 
 
 # def split_by_null(arr):
