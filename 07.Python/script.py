@@ -77,21 +77,20 @@
 # print (full)
 
 #  string methods
+import math
 course = "Python protgramming"
-print (course.upper())
+print(course.upper())
 print(course.lower())
-print (course.title())
+print(course.title())
 print(course.strip())
-print(course.rstrip()) # removes white pace on right 
-print(course.lstrip()) #remove white space on left
-print (course.find("pro")) #find index of pro
-print (course.replace("P", "_"))
-print ("Programming " in course) 
-print ("Programming " not in course)
+print(course.rstrip())  # removes white pace on right
+print(course.lstrip())  # remove white space on left
+print(course.find("pro"))  # find index of pro
+print(course.replace("P", "_"))
+print("Programming " in course)
+print("Programming " not in course)
 
- 
- 
- 
+
 # Numbers
 x = 10 + 3
 x = 10 - 3
@@ -101,19 +100,18 @@ x = 10 // 3
 x = 10 % 3
 x = 10 ** 3
 
-x= x + 1
-x += 1 #Agumentmented assignment operator
+x = x + 1
+x += 1  # Agumentmented assignment operator
 print(x)
 
 # Number Methods
-import math 
 PI = -3.14
 print(round(PI))
-print (abs(PI))
+print(abs(PI))
 print(math.floor(PI))
 
 # Type Conversion
-   
+
 x = input("x: ")
 Y = x + 1
 print(int(x))
@@ -121,18 +119,7 @@ print(float(x))
 print(bool(x))
 
 
-# Conditional statments 
-
-
-
-
-
-
-
-
-
-
-
+# Conditional statments
 def split_by_null(arr):
     result = []
     current_subarray = []
@@ -143,12 +130,13 @@ def split_by_null(arr):
                 current_subarray = []
         else:
             current_subarray.append(item)
-    
+
     if current_subarray:
         result.append(current_subarray)
-    
+
     return result
 
-input_array = [1, 2,4, None, 3, 4, None, 5]
+
+input_array = [1, 2, 4, None, 3, 4, None, 5]
 output = split_by_null(input_array)
 print(output)
