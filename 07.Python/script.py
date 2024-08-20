@@ -105,6 +105,13 @@ x= x + 1
 x += 1 #Agumentmented assignment operator
 print(x)
 
+# Number Methods
+import math 
+PI = -3.14
+print(round(PI))
+print (abs(PI))
+print(math.floor(PI))
+
 
     
 
