@@ -138,7 +138,7 @@
 
 # Logical Operators 
 
-high_income = False
+high_income:bool = False
 good_credit = True
 students = False
 
