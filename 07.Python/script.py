@@ -134,20 +134,16 @@
 # print(message)
 
 
+# Logical Operators
 
+# high_income:bool = False
+# good_credit = True
+# students = False
 
-# Logical Operators 
-
-high_income:bool = False
-good_credit = True
-students = False
-
-if (high_income or good_credit) and not students:
-    print("Eligible")
-else: 
-    print("Not eligible")
-    
-    
+# if (high_income or good_credit) and not students:
+#     print("Eligible")
+# else:
+#     print("Not eligible")
 
 
 # def split_by_null(arr):
@@ -170,3 +166,24 @@ else:
 # input_array = [1, 2, 4, None, 3, 4, None, 5]
 # output = split_by_null(input_array)
 # print(output)
+
+
+def simulate_algorithm(n):
+    sequence = []
+
+    while n != 1:
+        sequence.append(n)
+
+        if n % 2 == 0:
+            n = n // 2
+        else:
+            n = 3 * n + 1
+
+    sequence.append(1)
+
+    print(" ".join(map(str, sequence)))
+
+
+n = int(input().strip())
+
+simulate_algorithm(n)
