@@ -144,3 +144,7 @@
 #     print("Eligible")
 # else:
 #     print("Not eligible")
+
+
+meaning = 42
+print(' ')
