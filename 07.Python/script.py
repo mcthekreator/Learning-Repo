@@ -146,14 +146,21 @@
 #     print("Not eligible")
 
 
-meaning = 42
-print(' ')
+# meaning = 42
+# print(' ')
 
 
-# Additionof two numebers
+# # Addition of two numebers
 
 
-num1 = int(input("Enter first number: "))
-num2 = int(input("Enter second number: "))
-sum_of_numbers = num1 + num2
-print(f"{num1} + {num2} = {sum_of_numbers}")
+# num1 = int(input("Enter first number: "))
+# num2 = int(input("Enter second number: "))
+# sum_of_numbers = num1 + num2
+# print(f"{num1} + {num2} = {sum_of_numbers}")
+
+
+# Area of a triangle
+base = float(input("Enter base value: "))
+hieght = float(input("Enter hieght value: "))
+area = 1/2 * base * hieght
+print(f"The area of triangle value of : {base} and {hieght} is \n {area} ")
