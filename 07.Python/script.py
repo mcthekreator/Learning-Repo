@@ -160,7 +160,15 @@
 
 
 # Area of a triangle
-base = float(input("Enter base value: "))
-hieght = float(input("Enter hieght value: "))
-area = 1/2 * base * hieght
-print(f"The area of triangle value of : {base} and {hieght} is \n {area} ")
+# base = float(input("Enter base value: "))
+# hieght = float(input("Enter hieght value: "))
+# area = 1/2 * base * hieght
+# print(f"The area of triangle value of : {base} and {hieght} is \n {area} ")
+
+# Swap two variables
+user1_number = 10
+user2_number = 20
+placeholder = user1_number
+user1_number = user2_number
+user2_number = placeholder
+print(f"{user1_number} {user2_number}")
