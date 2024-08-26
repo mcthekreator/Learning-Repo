@@ -146,46 +146,29 @@ else:
     print("Not eligible")
 
 
-def split_by_null(arr):
-    result = []
-    current_subarray = []
-    for item in arr:
-        if item is None:
-            if current_subarray:
-                result.append(current_subarray)
-                current_subarray = []
-        else:
-            current_subarray.append(item)
-
-    if current_subarray:
-        result.append(current_subarray)
-
-    return result
+# meaning = 42
+# print(' ')
 
 
-input_array = [1, 2, 4, None, 3, 4, None, 5]
-output = split_by_null(input_array)
-print(output)
+# # Addition of two numebers
 
 
-def simulate_algorithm(n):
-    sequence = []
-
-    while n != 1:
-        sequence.append(n)
-
-        if n % 2 == 0:
-            n = n // 2
-        else:
-            n = 3 * n + 1
-
-    sequence.append(1)
-
-    print(" ".join(map(str, sequence)))
+# num1 = int(input("Enter first number: "))
+# num2 = int(input("Enter second number: "))
+# sum_of_numbers = num1 + num2
+# print(f"{num1} + {num2} = {sum_of_numbers}")
 
 
+# Area of a triangle
+# base = float(input("Enter base value: "))
+# hieght = float(input("Enter hieght value: "))
+# area = 1/2 * base * hieght
+# print(f"The area of triangle value of : {base} and {hieght} is \n {area} ")
 
-
-n = int(input().strip())
-
-simulate_algorithm(n)
+# Swap two variables
+user1_number = 10
+user2_number = 20
+placeholder = user1_number
+user1_number = user2_number
+user2_number = placeholder
+print(f"{user1_number} {user2_number}")
