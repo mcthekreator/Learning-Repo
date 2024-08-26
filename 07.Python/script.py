@@ -120,52 +120,52 @@
 
 
 # Conditional statments
-# temprature = 15
-# if temprature > 30:
-#     print(" Its warn")
-#     print(" Drintk water")
-# elif temprature < 30:
-#     print("Its cold")
-# print("Done")
+temprature = 15
+if temprature > 30:
+    print(" Its warn")
+    print(" Drintk water")
+elif temprature < 30:
+    print("Its cold")
+print("Done")
 
 # Ternary Operator
 
-# message = "is warn" if temprature < 30 else "is code"
-# print(message)
+message = "is warn" if temprature < 30 else "is code"
+print(message)
 
 
 # Logical Operators
 
-# high_income:bool = False
-# good_credit = True
-# students = False
+high_income: bool = False
+good_credit = True
+students = False
 
-# if (high_income or good_credit) and not students:
-#     print("Eligible")
-# else:
-#     print("Not eligible")
-
-
-# def split_by_null(arr):
-#     result = []
-#     current_subarray = []
-#     for item in arr:
-#         if item is None:
-#             if current_subarray:
-#                 result.append(current_subarray)
-#                 current_subarray = []
-#         else:
-#             current_subarray.append(item)
-
-#     if current_subarray:
-#         result.append(current_subarray)
-
-#     return result
+if (high_income or good_credit) and not students:
+    print("Eligible")
+else:
+    print("Not eligible")
 
 
-# input_array = [1, 2, 4, None, 3, 4, None, 5]
-# output = split_by_null(input_array)
-# print(output)
+def split_by_null(arr):
+    result = []
+    current_subarray = []
+    for item in arr:
+        if item is None:
+            if current_subarray:
+                result.append(current_subarray)
+                current_subarray = []
+        else:
+            current_subarray.append(item)
+
+    if current_subarray:
+        result.append(current_subarray)
+
+    return result
+
+
+input_array = [1, 2, 4, None, 3, 4, None, 5]
+output = split_by_null(input_array)
+print(output)
 
 
 def simulate_algorithm(n):
@@ -182,6 +182,8 @@ def simulate_algorithm(n):
     sequence.append(1)
 
     print(" ".join(map(str, sequence)))
+
+
 
 
 n = int(input().strip())
