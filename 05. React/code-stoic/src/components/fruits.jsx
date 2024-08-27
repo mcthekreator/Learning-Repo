@@ -5,7 +5,7 @@ export default function Fruits() {
     { name: "Ghana", population: 22342, region: "Africa" },
     { name: "Nigeria", population: 200000, region: "Africa" },
     { name: "United Kingdom", population: 67000, region: "Europe" },
-    { name: "China", population: 1441000, region: "Asia" }
+    { name: "China", population: 1441000, region: "Asia" },
   ];
 
   return (
@@ -16,9 +16,11 @@ export default function Fruits() {
 
       <h2>
         {countries
-          .filter(item => item.region.toLowerCase() === "africa")
-          .map(item => (
-            <li key={item.name}>{item.name}</li>
+          .filter((item) => item.region.toLowerCase() === "africa")
+          .map((item) => (
+            <li key={item.name}>
+              {item.name}: {item.population}
+            </li>
           ))}
       </h2>
     </>
