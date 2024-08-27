@@ -120,30 +120,30 @@
 
 
 # Conditional statments
-temprature = 15
-if temprature > 30:
-    print(" Its warn")
-    print(" Drintk water")
-elif temprature < 30:
-    print("Its cold")
-print("Done")
+# temprature = 15
+# if temprature > 30:
+#     print(" Its warn")
+#     print(" Drintk water")
+# elif temprature < 30:
+#     print("Its cold")
+# print("Done")
 
-# Ternary Operator
+# # Ternary Operator
 
-message = "is warn" if temprature < 30 else "is code"
-print(message)
+# message = "is warn" if temprature < 30 else "is code"
+# print(message)
 
 
-# Logical Operators
+# # Logical Operators
 
-high_income: bool = False
-good_credit = True
-students = False
+# high_income: bool = False
+# good_credit = True
+# students = False
 
-if (high_income or good_credit) and not students:
-    print("Eligible")
-else:
-    print("Not eligible")
+# if (high_income or good_credit) and not students:
+#     print("Eligible")
+# else:
+#     print("Not eligible")
 
 
 # meaning = 42
@@ -166,9 +166,9 @@ else:
 # print(f"The area of triangle value of : {base} and {hieght} is \n {area} ")
 
 # Swap two variables
-user1_number = 10
-user2_number = 20
-placeholder = user1_number
-user1_number = user2_number
-user2_number = placeholder
-print(f"{user1_number} {user2_number}")
+# user1_number = 10
+# user2_number = 20
+# placeholder = user1_number
+# user1_number = user2_number
+# user2_number = placeholder
+# print(f"{user1_number} {user2_number}")

@@ -27,26 +27,26 @@ a = [1, 2, 3, 4, 5, 7, 8]
 print(secondLargest_and_secondSmallest(a))
 
 
-# def split_by_null(arr):
-#     result = []
-#     current_subarray = []
-#     for item in arr:
-#         if item is None:
-#             if current_subarray:
-#                 result.append(current_subarray)
-#                 current_subarray = []
-#         else:
-#             current_subarray.append(item)
+def split_by_null(arr):
+    result = []
+    current_subarray = []
+    for item in arr:
+        if item is None:
+            if current_subarray:
+                result.append(current_subarray)
+                current_subarray = []
+        else:
+            current_subarray.append(item)
 
-#     if current_subarray:
-#         result.append(current_subarray)
+    if current_subarray:
+        result.append(current_subarray)
 
-#     return result
+    return result
 
 
-# input_array = [1, 2, 4, None, 3, 4, None, 5]
-# output = split_by_null(input_array)
-# print(output)
+input_array = [1, 2, 4, None, 3, 4, None, 5]
+output = split_by_null(input_array)
+print(output)
 
 
 def simulate_algorithm(n):
