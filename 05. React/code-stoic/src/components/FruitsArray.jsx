@@ -12,7 +12,12 @@ export default function FruitsArray() {
     <>
       <ol>
         {fruits.map((fruit) => (
-          <Fruit key={fruit.name} name={fruit.name} emoji={fruit.emoji} price={fruit.price}></Fruit>
+          <Fruit
+            key={fruit.name}
+            name={fruit.name}
+            emoji={fruit.emoji}
+            price={fruit.price}
+          ></Fruit>
         ))}
       </ol>
     </>
