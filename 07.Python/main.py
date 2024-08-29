@@ -26,14 +26,18 @@ print(age)
 VERSION: Final[str] = "1.0.4.5"
 
 # reusable code
+
+
 def show_date():
     print("This is the ciurrent date and time:")
     print(datetime.now())
-    
+
+
 show_date()
 show_date()
 show_date()
 show_date()
+
 
 def greet(name):
     print(f"Hello, {name}!")
@@ -42,8 +46,29 @@ def greet(name):
 greet("John")
 greet("Michael")
 
+
 def add(num1, num2):
     return num1 + num2
+
+
 print(add(4, 4))
 
-#
+# Classes
+
+
+class Car:
+    def __init__(self, brand, horsepower):
+        self.brand = brand
+        self.horsepower = horsepower
+    def drive(self):
+        print(f'{self.brand} is driving')
+    
+    def get_info(self):
+        print(f'{self.brand} with {self.horsepower} horsepower')    
+
+volvo: Car = Car('Vaolvo', 200)
+print(volvo.colours)
+print(volvo.horsepower)
+
+
+

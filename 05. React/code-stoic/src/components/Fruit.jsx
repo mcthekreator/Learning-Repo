@@ -2,7 +2,7 @@ export default function Fruit({ name, price, emoji }) {
   return (
     <div>
       <>
-        {/* {props.name} {props.emoji} : ${props.price} */}
+        {/* { {name} {emoji}  ${price} } */}
         {price > 5 ? (
           <li>
             {emoji}
@@ -15,3 +15,10 @@ export default function Fruit({ name, price, emoji }) {
     </div>
   );
 }
+
+// peacokck
+// peace makers
+
+// // inclusive for all, benevolte
+// mavavevi behaviour : self motivated
+// post grassivce
