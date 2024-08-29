@@ -3,6 +3,5 @@ import Fruit from "./Fruit";
 
 export default function ConditionalComponents() {
   const display = true;
-  return display ? <Fruit/> : <Code/>
-
+  return display ? <Fruit /> : <Code />;
 }

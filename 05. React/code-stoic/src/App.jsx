@@ -6,10 +6,10 @@ import ConditionalComponents from "./components/ConditionalComponents";
 function App() {
   return (
     <>
-      <Hello name="Derrick" message="Hi ther" />
-      <Fruits />
+      {/* <Hello name="Derrick" message="Hi ther" /> */}
+      {/* <Fruits /> */}
       <FruitsArray/>
-      <ConditionalComponents/>
+      {/* <ConditionalComponents/> */}
     </>
   );
 }
