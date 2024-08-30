@@ -173,3 +173,4 @@
 # user2_number = placeholder
 # print(f"{user1_number} {user2_number}")
 
+print(2*3+3**2)

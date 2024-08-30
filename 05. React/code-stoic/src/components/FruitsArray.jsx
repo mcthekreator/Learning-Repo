@@ -2,11 +2,11 @@ import Fruit from "./Fruit";
 
 export default function FruitsArray() {
   const fruits = [
-    { name: "Apple", price: 3, emoji: "🍎" },
-    { name: "Mango", price: 4, emoji: "🥭" },
-    { name: "Banana", price: 6, emoji: "🍌" },
-    { name: "Oange", price: 2, emoji: "🍊" },
-    { name: "Pineapple", price: 8, emoji: "🍍" },
+    { name: "Apple", price: 3, emoji: "🍎", soldout: false },
+    { name: "Mango", price: 4, emoji: "🥭" ,  soldout: true },
+    { name: "Banana", price: 6, emoji: "🍌",  soldout: false  },
+    { name: "Oange", price: 2, emoji: "🍊" ,  soldout: false },
+    { name: "Pineapple", price: 8, emoji: "🍍" ,  soldout: true},
   ];
   return (
     <>
@@ -17,6 +17,7 @@ export default function FruitsArray() {
             name={fruit.name}
             emoji={fruit.emoji}
             price={fruit.price}
+            soldout={fruit.soldout}
           ></Fruit>
         ))}
       </ol>

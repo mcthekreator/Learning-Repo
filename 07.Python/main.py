@@ -67,8 +67,6 @@ class Car:
         print(f'{self.brand} with {self.horsepower} horsepower')    
 
 volvo: Car = Car('Vaolvo', 200)
-print(volvo.colours)
+print(volvo.brand)
 print(volvo.horsepower)
-
-
 
