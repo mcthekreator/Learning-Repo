@@ -173,4 +173,14 @@
 # user2_number = placeholder
 # print(f"{user1_number} {user2_number}")
 
-print(2*3+3**2)
+
+my_list = [1, 23, "sdkjf", 2]
+
+myname = "Richat"
+
+print(my_list.append(3))
+print(my_list)
+print(my_list.clear())
+print(my_list)
+print(my_list.copy())
+print(my_list)
