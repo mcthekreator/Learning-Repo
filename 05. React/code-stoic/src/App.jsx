@@ -2,7 +2,7 @@ import Fruits from "./components/fruits";
 import Hello from "./components/Hello";
 import FruitsArray from "./components/FruitsArray"
 import ConditionalComponents from "./components/ConditionalComponents";
-import Message from "./components/Message";
+import Counter from "./components/Counter";
 
 function App() {
   return (
@@ -11,7 +11,7 @@ function App() {
       {/* <Fruits /> */}
       {/* <FruitsArray/> */}
       {/* <ConditionalComponents/> */}
-      <Message/>
+      <Counter/>
     </>
   );
 }
