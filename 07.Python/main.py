@@ -10,7 +10,6 @@ number: int = 10
 decimal: float = 2.5
 text: str = "Hello World"
 active: bool = False
-
 names: list = ['Bob', 'Anna', 'Luigi']
 coordinates: tuple = (1.2, 3.5)
 unique: set = {1, 4, 2, 9}
@@ -60,13 +59,14 @@ class Car:
     def __init__(self, brand, horsepower):
         self.brand = brand
         self.horsepower = horsepower
+
     def drive(self):
         print(f'{self.brand} is driving')
-    
+
     def get_info(self):
-        print(f'{self.brand} with {self.horsepower} horsepower')    
+        print(f'{self.brand} with {self.horsepower} horsepower')
+
 
 volvo: Car = Car('Vaolvo', 200)
 print(volvo.brand)
 print(volvo.horsepower)
-
