@@ -3,6 +3,7 @@ import Hello from "./components/Hello";
 import FruitsArray from "./components/FruitsArray"
 import ConditionalComponents from "./components/ConditionalComponents";
 import Counter from "./components/Counter";
+import Form from "./components/Form";
 
 function App() {
   return (
@@ -11,7 +12,8 @@ function App() {
       {/* <Fruits /> */}
       {/* <FruitsArray/> */}
       {/* <ConditionalComponents/> */}
-      <Counter/>
+      {/* <Counter/> */}
+      <Form/>
     </>
   );
 }
