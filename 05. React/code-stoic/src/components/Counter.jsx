@@ -1,21 +1,22 @@
-import React, { useState } from 'react'
+import React, { useState } from "react";
 
 export default function Counter() {
-    const [count, setCount] = useState(0)
-    function handleClick(){
-        setCount(count + 1)
-    }
-    function decreaseClick(){
-        setCount(count - 1)
-    }
-
+  const [count, setScount] = useState(0);
+  const [count, setScount] = useState(0);
+  function handleIncrement() { 
+    setScount(count + 1);
+  }
+  function handleDecrement() {
     
-
-    return (
-        <div>
-            <h1>Count value is: {count}</h1>
-            <button onClick={handleClick}>increment</button>
-            <button onClick={decreaseClick}>decrement</button>
-        </div>
-    )
+    if(count === 5) {
+      setScount(count - 5);
+    }
+  }
+  return (
+    <div>
+      <h1>Count value is: {count}</h1>
+      <button onClick={handleIncrement}>Increment</button>
+      <button onClick={handleDecrement}>Decrement</button>
+    </div>
+  );
 }
