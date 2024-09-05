@@ -1,23 +1,20 @@
-# def sequence_generator(n):
+def sequence_generator(n):
+    sequence_List = []
+    while n != 1:
+        sequence_List.append(n)
+        if n % 2 == 0:
+            n = n // 2
+        else:
+            n = 3 * n + 1
+    sequence_List.append(1)
+    print(" ".join(map(str, sequence_List)))
 
-#     sequence_List = []
 
-#     while n != 1:
-#         sequence_List.append(n)
-#         if n % 2 == 0:
-#             n = n // 2
-#         else:
-#             n = 3 * n + 1
-
-#     sequence_List.append(1)
-#     print(" ".join(map(str, sequence_List)))
-
-# sequence_generator(3)
+sequence_generator(3)
 
 
 def secondLargest_and_secondSmallest(a):
     a.sort()
-
     second_smallest = a[1]
     second_largest = a[-2]
     return [second_largest, second_smallest]
@@ -51,20 +48,15 @@ print(output)
 
 def simulate_algorithm(n):
     sequence = []
-
     while n != 1:
         sequence.append(n)
-
         if n % 2 == 0:
             n = n // 2
         else:
             n = 3 * n + 1
-
     sequence.append(1)
-
     print(" ".join(map(str, sequence)))
 
 
 n = int(input().strip())
-
 simulate_algorithm(n)

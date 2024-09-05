@@ -1,14 +1,15 @@
-# # variables
-# # declaring variables
+# variables
+# declaring variables
 # miles = 10
 # # declareing mulitple variables
 # a, b, c = 0, 1, 3
 # print(a, b, c)
-# miles = "Derrick"
-# miles.replace("Richard", "Derrick")
-# print(miles)
 
-# if miles == "Derrick":
+miles = "Richard"
+miles.replace("Richard", "McAdams")
+# print(miles)
+# if miles == "McAdams":
+#     miles.replace('Derrick', 'McAdams')
 #     print("The variable miles is now Derrick")
 # else:
 #     print("The variable miles is now")
@@ -118,7 +119,6 @@
 # print(float(x))
 # print(bool(x))
 
-
 # Conditional statments
 # temprature = 15
 # if temprature > 30:
@@ -174,13 +174,19 @@
 # print(f"{user1_number} {user2_number}")
 
 
-my_list = [1, 23, "sdkjf", 2]
+# my_list = [1, 23, "sdkjf", 2]
 
-myname = "Richat"
+# myname = "Richard McAdmas"
 
-print(my_list.append(3))
-print(my_list)
-print(my_list.clear())
-print(my_list)
-print(my_list.copy())
-print(my_list)
+# print(my_list.append(3))
+# print(my_list)
+# print(my_list.clear())
+# print(my_list)
+# print(my_list.copy())
+# print(my_list)
+
+
+# Dictionaries
+
+users: dict = {0: 'Mario', 1:  'Luigi', 2: 'James'}
+print(users.values())
