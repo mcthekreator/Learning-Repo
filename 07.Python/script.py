@@ -190,3 +190,5 @@ miles.replace("Richard", "McAdams")
 
 users: dict = {0: 'Mario', 1:  'Luigi', 2: 'James'}
 print(users.values())
+print(users.keys())
+print(users.items())
