@@ -192,3 +192,7 @@ users: dict = {0: 'Mario', 1:  'Luigi', 2: 'James'}
 print(users.values())
 print(users.keys())
 print(users.items())
+
+#List 
+people:list = ["derrick", 39, "joe"]
+print(people.reverse)
