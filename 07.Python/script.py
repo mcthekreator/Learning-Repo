@@ -196,3 +196,7 @@ print(users.items())
 #List 
 people:list = ["derrick", 39, "joe"]
 print(people.reverse)
+
+username = "Richard"
+print(username.splitlines())
+print(username.split(""))
