@@ -12,8 +12,8 @@ function App() {
       {/* <Fruits /> */}
       {/* <FruitsArray/> */}
       {/* <ConditionalComponents/> */}
-      {/* <Counter/> */}
-      <Form />
+      <Counter/>
+      {/* <Form /> */}
     </>
   );
 }
