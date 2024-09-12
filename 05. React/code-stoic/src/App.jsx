@@ -12,10 +12,12 @@ function App() {
       {/* <Fruits /> */}
       {/* <FruitsArray/> */}
       {/* <ConditionalComponents/> */}
-      <Counter/>
+      <Counter />
       {/* <Form /> */}
     </>
   );
 }
 
 export default App;
+
+
