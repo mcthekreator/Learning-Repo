@@ -176,6 +176,10 @@ miles.replace("Richard", "McAdams")
 
 # my_list = [1, 23, "sdkjf", 2]
 
+List = [3, 4, 5, 6]
+list.append(7)
+list.clear()
+
 # myname = "Richard McAdmas"
 
 # print(my_list.append(3))
@@ -193,8 +197,64 @@ print(users.values())
 print(users.keys())
 print(users.items())
 
-#List 
-people:list = ["derrick", 39, "joe"]
+# List
+people: list = ["derrick", 39, "joe"]
+print(people.reverse)
+
+username = "Richard"
+print(username.splitlines())
+print(username.split(""))
+
+
+# meaning = 42
+# print(' ')
+
+
+# # Addition of two numebers
+
+
+# num1 = int(input("Enter first number: "))
+# num2 = int(input("Enter second number: "))
+# sum_of_numbers = num1 + num2
+# print(f"{num1} + {num2} = {sum_of_numbers}")
+
+
+# Area of a triangle
+# base = float(input("Enter base value: "))
+# hieght = float(input("Enter hieght value: "))
+# area = 1/2 * base * hieght
+# print(f"The area of triangle value of : {base} and {hieght} is \n {area} ")
+
+# Swap two variables
+# user1_number = 10
+# user2_number = 20
+# placeholder = user1_number
+# user1_number = user2_number
+# user2_number = placeholder
+# print(f"{user1_number} {user2_number}")
+
+
+# my_list = [1, 23, "sdkjf", 2]
+
+# myname = "Richard McAdmas"
+
+# print(my_list.append(3))
+# print(my_list)
+# print(my_list.clear())
+# print(my_list)
+# print(my_list.copy())
+# print(my_list)
+
+
+# Dictionaries
+
+users: dict = {0: 'Mario', 1:  'Luigi', 2: 'James'}
+print(users.values())
+print(users.keys())
+print(users.items())
+
+# List
+people: list = ["derrick", 39, "joe"]
 print(people.reverse)
 
 username = "Richard"
