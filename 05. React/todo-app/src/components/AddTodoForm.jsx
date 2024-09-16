@@ -16,7 +16,6 @@ export default function AddTodoForm() {
       setInputValue("");
     }
   };
-
   return (
     <div>
       <form onSubmit={handleSubmit}>
