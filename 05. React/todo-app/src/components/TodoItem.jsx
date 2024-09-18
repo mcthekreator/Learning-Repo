@@ -1,7 +1,7 @@
 export default function TodoItem(props) {
   return (
     <ul>
-      <li>{props.item}</li>
+      <li> {props.index}{props.item}</li>
     </ul>
   );
 }

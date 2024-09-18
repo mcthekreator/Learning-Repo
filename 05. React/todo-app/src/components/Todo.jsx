@@ -22,7 +22,7 @@ export default function Todo() {
       </form>
 
       {todos.map((item, index) => (
-        <TodoItem item={item} />
+        <TodoItem key={index} item={item} />
       ))}
     </div>
   );
