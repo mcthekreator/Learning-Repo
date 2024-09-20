@@ -6,8 +6,10 @@ export default function Todo() {
   function handleSubmit(e) {
     e.preventDefault();
     setTodos([...todos, todo]);
-    setTodo("");
+    localStorage.setItem('totdList', setTodos([...todos, todo]))
     console.log(todos);
+
+    setTodo("");
   }
   return (
     <div>
