@@ -7,7 +7,6 @@ export default function Fruits() {
     { name: "United Kingdom", population: 67000, region: "Europe" },
     { name: "China", population: 1441000, region: "Asia" },
   ];
-
   return (
     <>
       {fruits.map((fruit) => (
