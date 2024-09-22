@@ -1,4 +1,10 @@
 export default function AddNote() {
-    return <div className="border border-red-200 h-52 w-full ">Add Note</div>;
-
+  const handleClick = () => {
+    alert("Form added");
+  };
+  return (
+    <button  className="border bg-transparent border-red-200 h-52 w-full ">
+      Add Note
+    </button>
+  );
 }
