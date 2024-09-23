@@ -4,7 +4,6 @@ export default function AddNoteForm() {
         <input type="text" placeholder="Title" />
         <textarea name="" id="" placeholder="Description"></textarea>
         <button>Add</button>
-
        </form>
     )
 }
