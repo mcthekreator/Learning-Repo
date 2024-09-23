@@ -1,13 +1,14 @@
 import AddNoteForm from "./AddNoteForm";
+import { useState } from 'react';
 
 export default function AddNote() {
-  let display = false;
+  let [display, setDisplay] = useState(false)
   const handleClick = () => {
-    display = true;
+    setDisplay(true)
   };
   return (
     <div>
-      {display ? <AddNoteForm /> : display}
+      {display ? <AddNoteForm /> : false}
       <button
         onClick={handleClick}
         className=" bg-gray-200 border-red-200 h-52 w-full text-black text-center text-4xl font-bold "
