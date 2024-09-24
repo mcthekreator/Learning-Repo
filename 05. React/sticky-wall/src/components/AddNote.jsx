@@ -1,10 +1,10 @@
 import AddNoteForm from "./AddNoteForm";
-import { useState } from 'react';
+import { useState } from "react";
 
 export default function AddNote() {
-  let [display, setDisplay] = useState(false)
+  let [display, setDisplay] = useState(false);
   const handleClick = () => {
-    setDisplay(true)
+    setDisplay(true);
   };
   return (
     <div>
