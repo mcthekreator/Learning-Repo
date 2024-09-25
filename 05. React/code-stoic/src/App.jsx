@@ -10,9 +10,9 @@ function App() {
     <>
       {/* <Hello name="Derrick" message="Hi ther" /> */}
       {/* <Fruits /> */}
-      {/* <FruitsArray/> */}
+      <FruitsArray/>
       {/* <ConditionalComponents/> */}
-      <Counter />
+      {/* <Counter /> */}
       {/* <Form /> */}
     </>
   );

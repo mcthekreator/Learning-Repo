@@ -1,4 +1,4 @@
-import { ADD_TODO } from "./actionTypes";
+import { ADD_TODO, TOGGLE_TODO } from "./actionTypes";
 
 const initialState = {
   todos: [],
@@ -16,6 +16,14 @@ const todoReducer = (state = initialState, action) => {
         filter: state.filter,
         searchTerm: state.searchTerm,
       };
+    case TOGGLE_TODO:
+        return {
+            todos: state.todos.map((todo, index) =>
+              index === action.payload.index? {...todo, completed:!todo.completed } : todo
+            ),
+            filter: state.filter,
+            searchTerm: state.searchTerm,
+          }; 
 
     default:
       break;
