@@ -42,3 +42,7 @@ export const updateSearchTerm = (searchTerm) => ({
   type: UPDATE_SERACH_TERM,
   payload: { searchTerm },
 });
+export const deleteTerm = (searchTerm) => ({
+  type: UPDATE_SCH_TERM,
+  payload: { searchTerm },
+});
