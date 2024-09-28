@@ -4,15 +4,14 @@ import Card from "./components/card";
 import Header from "./components/Header";
 
 function App() {
+ let MyNumbers  = [1, 2, 3, 4, 5]
   return (
     <div className="bg-[#FAFAFA] h-screen">
       <Header />
       <div className="grid grid-cols-4 gap-4">
-        <Card />
-        <Card />
-        <Card />
-        <Card />
-        <Card />
+        {MyNumbers.map(()=>{
+          <Card/>
+        })}
         <AddNote/>
       </div>
     </div>
