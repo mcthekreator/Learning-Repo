@@ -1,9 +1,9 @@
-export default function Card({ title, description }) {
+export default function Card(props) {
   return (
     <div className="border border-red-200 h-52 w-full ">
-      <h1> {title}</h1>
+      <h1> {props.title}</h1>
       <textarea name="" id="">
-        {description}
+        {props.description}
       </textarea>
     </div>
   );
