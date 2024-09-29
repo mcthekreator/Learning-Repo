@@ -13,9 +13,9 @@ function App() {
     <div className="bg-[#FAFAFA] h-screen">
       <Header />
       <div className="grid grid-cols-4 gap-4">
-        {MyNumbers.map((num) => {
-           <Card key={num.title} title={num.title} description={num.description} />;
-        })}
+        {MyNumbers.map((num) => (
+           <Card key={num.title} title={num.title} description={num.description} />
+        ))}
         <AddNote />
       </div>
     </div>
