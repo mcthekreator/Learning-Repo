@@ -1,3 +1,6 @@
-export default function Card() {
-  return <div className="border border-red-200 h-52 w-full ">Add to List</div>;
+export default function Card({title, description}) {
+  return <div className="border border-red-200 h-52 w-full ">
+
+   <h1> {title}</h1>
+  </div>;
 }
