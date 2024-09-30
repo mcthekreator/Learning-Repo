@@ -6,15 +6,19 @@ import Header from "./components/Header";
 function App() {
   let MyNumbers = [
     { title: "Work", description: "jdfhgksfdsfgjhgwvlorem" },
-    { title: "Lunch", description: "lormarsfvmsd" }
+    { title: "Lunch", description: "lormarsfvmsd" },
   ];
-  
+
   return (
     <div className="bg-[#FAFAFA] h-screen">
       <Header />
       <div className="grid grid-cols-4 gap-4">
         {MyNumbers.map((num) => (
-           <Card key={num.title} title={num.title} description={num.description} />
+          <Card
+            key={num.title}
+            title={num.title}
+            description={num.description}
+          />
         ))}
         <AddNote />
       </div>
