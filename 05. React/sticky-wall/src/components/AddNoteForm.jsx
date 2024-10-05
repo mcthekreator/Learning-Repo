@@ -4,6 +4,7 @@ export default function AddNoteForm() {
   let [title, setTitle] = useState();
 
 const addToForm =()=>{
+  setTitle(title);
 
 
 }
