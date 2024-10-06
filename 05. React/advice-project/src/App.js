@@ -1,19 +1,26 @@
 import "./App.css";
-
+import axios from "axios";
 
 function App() {
-  const state = { advice: ""};
+  const state = { advice: "" };
 
-  const fetchAdvice = () =>{
-    fetch("https://api.adviceslip.com/advice")
-     .then((response) => response.json())
-     .then((data) => setState({ advice: data.slip.advice }));
+  const fetchAdvice = () => {
+    axios
+      .get("https://api.adviceslip.com/advice")
+      .then((response) => {
+        console.log(response);
+      })
+      .catch((error) => {
+        console.log(error);
+      });
+  };
+  fetchAdvice();
 
-  }
-
-  return <div className="App">
-    <h1>App</h1>
-  </div>;
+  return (
+    <div className="App">
+      <h1>App</h1>
+    </div>
+  );
 }
 
 export default App;
