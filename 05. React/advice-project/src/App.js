@@ -1,14 +1,17 @@
 import "./App.css";
 import axios from "axios";
+import { useState } from 'react';
 
 function App() {
   const state = { advice: "" };
+  const [adviceList, setAdviceList] = useState([]);
 
   const fetchAdvice = () => {
     axios
       .get("https://api.adviceslip.com/advice")
       .then((response) => {
-        console.log(response);
+        setAdviceList([...adviceList, response.data.slip.advice]);
+        console.log(adviceList);
       })
       .catch((error) => {
         console.log(error);
@@ -18,7 +21,9 @@ function App() {
 
   return (
     <div className="App">
-      <h1>App</h1>
+      {adviceList.map((advice) =>(
+        <h1>{advice}</h1>
+      ))}
     </div>
   );
 }
