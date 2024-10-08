@@ -1,5 +1,6 @@
-import { Component } from '@angular/core';
+import { Component, inject, OnInit } from '@angular/core';
 import { RouterOutlet } from '@angular/router';
+import { TodosStore } from './store/todo.store';
 
 @Component({
   selector: 'app-root',
@@ -8,6 +9,10 @@ import { RouterOutlet } from '@angular/router';
   templateUrl: './app.component.html',
   styleUrl: './app.component.scss'
 })
-export class AppComponent {
-  title = 'ngrx-signal-store-crash-course';
+export class AppComponent implements OnInit {
+  store = inject(TodosStore)
+
+  ngOnInit(): void {
+    this.store.todos()
+  }
 }
