@@ -1,18 +1,23 @@
 import { Component, inject, OnInit } from '@angular/core';
 import { RouterOutlet } from '@angular/router';
 import { TodosStore } from './store/todo.store';
+import { JsonPipe } from '@angular/common';
 
 @Component({
   selector: 'app-root',
   standalone: true,
-  imports: [RouterOutlet],
+  imports: [RouterOutlet, JsonPipe],
   templateUrl: './app.component.html',
-  styleUrl: './app.component.scss'
+  styleUrl: './app.component.scss',
 })
 export class AppComponent implements OnInit {
-  store = inject(TodosStore)
+  store = inject(TodosStore);
 
   ngOnInit(): void {
-    this.store.todos()
+    this.loadTodos().then(() => console.log("todos loaded"));
+  }
+
+  async loadTodos() {
+    this.store.loadAll();
   }
 }
