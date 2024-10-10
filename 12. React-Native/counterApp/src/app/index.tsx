@@ -45,6 +45,19 @@ const index = () => {
         }}
         placeholder="Enter email"
       />
+      <TextInput
+      
+        style={{
+          height: 40,
+          borderColor: "gray",
+          borderWidth: 1,
+          padding: 20,
+          margin: 30,
+          borderRadius: 10,
+        
+        }}
+        placeholder="Enter pasword"
+      />
     </ScrollView>
   );
 };
