@@ -7,9 +7,7 @@ const index = () => {
   const countUp = () => {
     setValue(value + 1)
   }
-  const countDown = () => {
-    setValue(value - 1)
-  }
+
 
   return (
     <ScrollView>
@@ -24,16 +22,11 @@ const index = () => {
         title="Click Me"
         onPress={countUp}
         color="black"
-        
+
+
 
       />
-      <Button
-        title="Click Me"
-        onPress={countDown}
-        color="blue"
-    
 
-      />
       <TextInput
         style={{
           height: 40,
@@ -45,19 +38,7 @@ const index = () => {
         }}
         placeholder="Enter email"
       />
-      <TextInput
-      
-        style={{
-          height: 40,
-          borderColor: "gray",
-          borderWidth: 1,
-          padding: 20,
-          margin: 30,
-          borderRadius: 10,
-        
-        }}
-        placeholder="Enter pasword"
-      />
+
     </ScrollView>
   );
 };
