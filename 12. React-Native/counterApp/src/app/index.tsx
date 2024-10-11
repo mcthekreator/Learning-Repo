@@ -1,13 +1,7 @@
-import React, { useState } from "react";
-import { View, Text, Image, ScrollView, TextInput, Button } from "react-native";
+import React from "react";
+import { View, Text, ScrollView, TextInput, Button } from "react-native";
 
 const index = () => {
-  const [value, setValue] = useState(0)
-
-  const countUp = () => {
-    setValue(value + 1)
-  }
-
 
   return (
     <ScrollView>
@@ -16,29 +10,39 @@ const index = () => {
           textAlign: "center",
           fontWeight: "bold",
           color: "orange"
-        }}>{value}</Text>
+        }}></Text>
       </View>
       <Button
         title="Click Me"
-        onPress={countUp}
         color="black"
 
-
-
       />
-
-      <TextInput
-        style={{
-          height: 40,
-          borderColor: "gray",
-          borderWidth: 1,
-          padding: 20,
-          margin: 30,
-          borderRadius: 10
-        }}
-        placeholder="Enter email"
-      />
-
+      <View style={{
+        marginHorizontal: 40
+      }}>
+        <TextInput
+          style={{
+            height: 40,
+            borderColor: "gray",
+            borderWidth: 1,
+            padding: 20,
+            marginVertical: 10,
+            borderRadius: 10
+          }}
+          placeholder="Enter email"
+        />
+        <TextInput
+          style={{
+            height: 40,
+            borderColor: "gray",
+            borderWidth: 1,
+            padding: 20,
+            marginVertical: 10,
+            borderRadius: 10
+          }}
+          placeholder="Enter email"
+        />
+      </View>
     </ScrollView>
   );
 };
