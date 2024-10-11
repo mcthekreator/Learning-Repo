@@ -1,7 +1,13 @@
-import React from "react";
-import { View, Text, ScrollView, TextInput, Button } from "react-native";
+import React, { useState } from "react";
+import { View, Text, ScrollView, TextInput, Pressable } from "react-native";
 
 const index = () => {
+
+  const [value, setValue] = useState(0);
+
+  const increment = ()=>{
+    setValue(value + 1);
+  }
 
   return (
     <ScrollView>
@@ -10,13 +16,17 @@ const index = () => {
           textAlign: "center",
           fontWeight: "bold",
           color: "orange"
-        }}></Text>
+        }}>{value}</Text>
       </View>
-      <Button
-        title="Click Me"
-        color="black"
-
-      />
+      <Pressable
+      onPress={increment}
+      style={{
+        backgroundColor: "orange",
+        width: "50%",
+        alignItems: "center",
+        marginHorizontal: "auto",
+        padding: 10
+      }}>Click Me</Pressable> 
       <View style={{
         marginHorizontal: 40
       }}>
