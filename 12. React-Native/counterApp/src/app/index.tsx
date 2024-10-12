@@ -4,7 +4,10 @@ import { View, Text, Image, ScrollView, TextInput, Button } from "react-native";
 const index = () => {
   const [value, setValue] = useState(0)
 
-  const countUP = () => {
+  const countUp = () => {
+    setValue(value + 1)
+  }
+  const countDown = () => {
     setValue(value + 1)
   }
 
@@ -20,6 +23,12 @@ const index = () => {
       <Button
         title="Click Me"
         onPress={countUP}
+        color="black"
+
+      />
+      <Button
+        title="Click Me"
+        onPress={countDown}
         color="black"
 
       />
