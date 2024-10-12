@@ -1,30 +1,36 @@
-import React from "react";
-import { View, Text, Image, ScrollView, TextInput } from "react-native";
+import React, { useState } from "react";
+import { View, Text, Image, ScrollView, TextInput, Button } from "react-native";
 
 const index = () => {
+  const [value, setValue] = useState(0)
+
+  const countUP = () => {
+    setValue(value + 1)
+  }
+
   return (
     <ScrollView>
       <View>
-        <Image
-          source={{
-            uri: "https://reactnative.dev/docs/assets/p_cat1.png",
-          }}
-          style={{
-            width: 100,
-            height: 100,
-            marginHorizontal: 150,
-            borderWidth: 3,
-            borderColor: "darkblue",
-          }}
-        />
+        <Text style={{
+          textAlign: "center",
+          fontWeight: "bold",
+          color: "orange"
+        }}>{value}</Text>
       </View>
+      <Button
+        title="Click Me"
+        onPress={countUP}
+        color="black"
+
+      />
       <TextInput
         style={{
           height: 40,
           borderColor: "gray",
           borderWidth: 1,
-          padding: 10,
+          padding: 20,
           margin: 30,
+          borderRadius: 10
         }}
         placeholder="Enter email"
       />
