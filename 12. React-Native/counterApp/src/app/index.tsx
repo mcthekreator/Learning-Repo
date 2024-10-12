@@ -22,7 +22,7 @@ const index = () => {
       </View>
       <Button
         title="Click Me"
-        onPress={countUP}
+        onPress={countUp}
         color="black"
 
       />
