@@ -8,7 +8,7 @@ const index = () => {
     setValue(value + 1)
   }
   const countDown = () => {
-    setValue(value + 1)
+    setValue(value - 1)
   }
 
   return (
