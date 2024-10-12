@@ -24,12 +24,14 @@ const index = () => {
         title="Click Me"
         onPress={countUp}
         color="black"
+        
 
       />
       <Button
         title="Click Me"
         onPress={countDown}
-        color="black"
+        color="blue"
+    
 
       />
       <TextInput
