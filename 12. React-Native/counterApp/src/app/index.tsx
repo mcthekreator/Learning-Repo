@@ -18,15 +18,15 @@ const index = () => {
           color: "orange"
         }}>{value}</Text>
       </View>
-      <Pressable
-        onPress={increment}
-        style={{
-          backgroundColor: "orange",
-          width: "50%",
-          alignItems: "center",
-          marginHorizontal: "auto",
-          padding: 10
-        }}>Click Me</Pressable>
+
+      <View style={{ display:'flex', flexDirection:'row', justifyContent: 'space-between', gap:5, padding:5, width: '100%'}}>
+        <Pressable
+          onPress={increment}
+          style={style.buttonStyle}>Increase Value</Pressable>
+        <Pressable style={style.buttonStyle}>Decrease Value</Pressable>
+      </View>
+
+
       <View style={{
         marginHorizontal: 40
       }}>
@@ -52,6 +52,12 @@ const style = StyleSheet.create({
     padding: 20,
     marginVertical: 10,
     borderRadius: 10
+  },
+  buttonStyle: {
+    backgroundColor: "orange",
+    width: "50%",
+    alignItems: "center",
+    padding: 10
   }
 
 })
