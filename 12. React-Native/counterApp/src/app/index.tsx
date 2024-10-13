@@ -8,6 +8,9 @@ const index = () => {
   const increment = () => {
     setValue(value + 1);
   }
+  const decrement = () => {
+    setValue(value - 1);
+  }
 
   return (
     <ScrollView>
@@ -18,12 +21,11 @@ const index = () => {
           color: "orange"
         }}>{value}</Text>
       </View>
-
-      <View style={{ display:'flex', flexDirection:'row', justifyContent: 'space-between', gap:5, padding:5, width: '100%'}}>
+      <View style={{ display: 'flex', flexDirection: 'row', justifyContent: 'space-between', marginHorizontal: 'auto', gap: 5, padding: 10, width: '90%' }}>
         <Pressable
           onPress={increment}
           style={style.buttonStyle}>Increase Value</Pressable>
-        <Pressable style={style.buttonStyle}>Decrease Value</Pressable>
+        <Pressable onPress={decrement} style={style.buttonStyle}>Decrease Value</Pressable>
       </View>
 
 
@@ -36,7 +38,8 @@ const index = () => {
         />
         <TextInput
           style={style.textInput}
-          placeholder="Enter email"
+          textContentType='password'
+          placeholder="Enter password"
         />
       </View>
     </ScrollView>
@@ -44,7 +47,6 @@ const index = () => {
 };
 
 const style = StyleSheet.create({
-
   textInput: {
     height: 40,
     borderColor: "gray",
@@ -57,9 +59,12 @@ const style = StyleSheet.create({
     backgroundColor: "orange",
     width: "50%",
     alignItems: "center",
-    padding: 10
+    padding: 10,
+    borderRadius: 10,
+    fontSize: 17,
+    fontWeight: "bold",
+    shadowColor: "black",
   }
-
 })
 
 export default index;
