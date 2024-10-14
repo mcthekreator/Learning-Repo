@@ -7,9 +7,6 @@ export default function SplashScreen() {
       <Text>SplashScreen</Text>
     </ScrollView>
   ) 
-
-
-
 }  
 const style = StyleSheet.create({
     splashscreen:{

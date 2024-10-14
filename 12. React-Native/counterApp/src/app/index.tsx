@@ -1,16 +1,12 @@
 import SplashScreen from "./screens/SplashScreen";
 
 const Index = () => {
-
-
+  
   return (
-    <SplashScreen/>
+    <SplashScreen />
 
   )
 };
-
-
-
 export default Index;
 
 
