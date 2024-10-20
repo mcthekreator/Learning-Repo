@@ -20,7 +20,7 @@ function greet (person: string = "Stranger"){
 greet( )
 
 
-const square (num: number):number =>{
+const square = (num: number):number =>{
     return num * num;
 }
 square(3)
