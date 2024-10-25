@@ -1,0 +1,11 @@
+so what they do is that they  provide a way to annotate or 
+modify the structure the behaviour with changing the source code directly 
+
+so there essential functions that are applied using the  @ symbol are they are called at runtime
+
+To enable them, you need to set the "experimentalDecorators": true flag in your tsconfig.json file
+
+
+
+
+so whena class in instanciated its contructor is the one that is been called first 

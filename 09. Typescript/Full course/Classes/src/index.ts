@@ -1,41 +1,41 @@
 // Classes Type Annotation
-// class Player{
-//     first: string;
-//     last: string;
-//     constructor(first: string, last:string){
-//         this.first = first;
-//         this.last = last
-//     }
-// }
-// const elton = new Player("Elton", "Steele")
-// console.log(elton);
+class Player{
+    first: string;
+    last: string;
+    constructor(first: string, last:string){
+        this.first = first;
+        this.last = last
+    }
+}
+const elton = new Player("Elton", "Steele")
+console.log(elton);
 
 // Class fileds
 
-// class Player{
-//     first: string;
-//     last: string;
-//     score: number = 0
-//     constructor(first: string, last:string){
-//         this.first = first;
-//         this.last = last
-//     }
-// }
-// const elton = new Player("Elton", "Steele")
-// console.log(elton); 
+class Player{
+    first: string;
+    last: string;
+    score: number = 0
+    constructor(first: string, last:string){
+        this.first = first;
+        this.last = last
+    }
+}
+const elton = new Player("Elton", "Steele")
+console.log(elton);
 
 
 // Readonly Classes 
 
-// class Player{
-//     readonly first: string;
-//     readonly last: string;
-//     score: number = 0
-//     constructor(first: string, last:string){
-//         this.first = first;
-//         this.last = last
-//     }
-// }
+class Player{
+    readonly first: string;
+    readonly last: string;
+    score: number = 0
+    constructor(first: string, last:string){
+        this.first = first;
+        this.last = last
+    }
+}
 // const elton = new Player("Elton", "Steele")
 // // elton.first = "Derrick"   Error
 // console.log(elton); 
