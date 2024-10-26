@@ -235,17 +235,11 @@ class Person {
 function Log(){
 
 }
-// So to apply this on  a method we need 3 parameters 
-// the first parameter if the object that owns the target method
 function Log(target: any){
 
 }
-// The second parameter is the name of the target method 
 function Log(targ:any, methodName:string, )
 
-// and the 3rd parameter is the descriptor object or the target object 
-// Every proper in an object has a descriptor object that describes that property
-// so the descriptors object has a property value that refrence the target object 
 
 function Log(target: any, methodName: string, descriptor: PropertyDescriptor  ){
 
@@ -295,7 +289,6 @@ function Log(target: any, methodName: string, descriptor: PropertyDescriptor  ){
     }
 }
 
-// using the spread operator when calling the function also allows us to pass the agument one by one to the original method 
 function Log(target: any, methodName: string, descriptor: PropertyDescriptor  ){
     const originalMethod = descriptor.value as Function;
     descriptor.value = function (...args: any[]){
