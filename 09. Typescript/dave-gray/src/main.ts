@@ -305,63 +305,28 @@ function Log(target: any, methodName: string, descriptor: PropertyDescriptor  ){
 } 
 
 
-// New Using an arrow function we will get a compliation error because arrows function doesnt define their own this keyword. 
 
-
-
-
-
-
-
-
-
-
-// Now lets see how decorators can be applied to classes 
-
-// so lets create a function called componenets
 function Componenets(){
 } 
-
-// so since we are going to apply this on a class we will have a single parameters that representas out constructor function 
-// and if the type is a function the runtime assumes that we are going to apply this decorator on a class 
 
 function Componenets(callingonstructor:Function  ){
 
 
 }
 
-// so now we can take out contructor and go to its prototype
-
-// so i will define a function and simply log something in the console 
-function Componenet(constructor:Function  ){
   
     constructor.prototype.uniqueId = Date.now()
     constructor.prototype.intersetInDom = () =>{
         console.log("inserting in the dom ");
         
     }
-}
 
-// so now evey instance of class will have these memebers  
-
-// we can also achieve that be inhierentance usinf the extends keyword
-
-// now lets create a profile componenets
 
 @Componenet
 class ProfileComponent{
 
 }
 
-// now the decorator is still going to execute even tho we didnt create any instances of the compnents. 
-
-
-
-
-
-// Property Decorators 
-
-// Lets craete a propert decorator that checks the lenght of a password 
  class User{
     password: string
 
@@ -386,9 +351,6 @@ function MinLength(length: number){
         return descriptor;
      
     }       
-}
-
-// now i will define a setter that take the new value as a string and check if the length alings with out condition
 function MinLength(length: number){
     return  (target: any, propertyName: string) =>{
         const descriptor: PropertyDescriptor = {
