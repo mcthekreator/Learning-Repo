@@ -279,8 +279,6 @@ let person = new Person()
 person.say("Hello")
 
 
-
-// using the rest operator, we allow the methos to make multiple parameters 
 function Log(target: any, methodName: string, descriptor: PropertyDescriptor  ){
     const originalMethod = descriptor.value as Function;
     descriptor.value = function (...args: any[]){
@@ -328,14 +326,11 @@ class ProfileComponent{
     }
  }
 
-//  so now lets create out decorator 
 function MinLength(length: number){
     return  (target: any, propertyKey: string) =>{
      
     }       
 }
-
-// now im gonna define a property descriptor for the target property 
 function MinLength(length: number){
     return  (target: any, propertyKey: string) =>{
         const descriptor: PropertyDescriptor = {
@@ -360,8 +355,6 @@ function MinLength(length: number){
      
     }       
 }
-
-// now if the legnth is valid then we assign the valie to a ne value and use the getter to return it 
 
 function MinLength(length: number){
     return  (target: any, propertyName: string) =>{
@@ -419,8 +412,5 @@ function MinLength(length: number){
      
     }       
 }
-
-// now lets create a instance of the user class 
-
 let user = new User("1234")
 console.log(user.password);
