@@ -214,16 +214,6 @@
 
 
 
-
-
-
-
-
-
-
-// Now every code and what do do
-// so lets create a class called Person witha method
-
 class Person {
     say(message: string){
         console.log("Person says "+ message);
@@ -231,7 +221,6 @@ class Person {
     }
 }
 
-//  so now lets craete a decorator and apply on this method 
 function Log(){
 
 }
@@ -245,7 +234,6 @@ function Log(target: any, methodName: string, descriptor: PropertyDescriptor  ){
 
 }
 
-// so mow we will set a new function to replace the original metho 
 function Log(target: any, methodName: string, descriptor: PropertyDescriptor  ){
     descriptor.value = function (){
 
@@ -253,7 +241,6 @@ function Log(target: any, methodName: string, descriptor: PropertyDescriptor  ){
 
 }
 
-// so now lets make refrenece to the original method 
 function Log(target: any, methodName: string, descriptor: PropertyDescriptor  ){
     const originalMethod = descriptor.value;
     descriptor.value = function (){
@@ -261,7 +248,6 @@ function Log(target: any, methodName: string, descriptor: PropertyDescriptor  ){
     }
 }
 
-// so before we make refenrence to the methos we can use the type assertion to tell the typescript complier that this is a function 
 
 function Log(target: any, methodName: string, descriptor: PropertyDescriptor  ){
     const originalMethod = descriptor.value as Function;
@@ -272,10 +258,7 @@ function Log(target: any, methodName: string, descriptor: PropertyDescriptor  ){
 }
 
 
-
-// so now if we create an instance of the person object 
 let person = new Person()
-// and we call the method 
 person.say("Hello")
 
 
