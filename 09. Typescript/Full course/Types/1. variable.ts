@@ -15,7 +15,7 @@ gameOver = true;
 // Type Inference
 
 let tvShow = "Power";
-tvShow = "Snowfall";
+tvShow = "Snowfall"; 
 // tvShow = false   Error
 
 

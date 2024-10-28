@@ -178,8 +178,8 @@
 // // Methods Decorator
 // // target: This refers to the prototype of the class for an instance method or the constructor for a static method 
 // // Propertykey: The name of the method decorated 
-// // Descriptor: A property descriptor object that defines the properties of the method, such as ist value, wheather it is writable, enumerable and configurable. 
-// // The descriptor allows the decorator to modify the mrthod‘s behavoir 
+// // Descriptor: A property descriptor object that defines the properties of the method, such as ist value, whether it is writable, enumerable and configurable.
+// // The descriptor allows the decorator to modify the method‘s behaviour
 // // It is a function that takes specific parameters and can modify the behavior of the method it decorates
 // // The method decorator can return either void or a modified PropertyDescriptor.
 // // If you return a new PropertyDescriptor, it replaces the original descriptor, allowing you to modify the behavior of the method.

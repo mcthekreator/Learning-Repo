@@ -9,3 +9,49 @@ To enable them, you need to set the "experimentalDecorators": true flag in your 
 
 
 so whena class in instanciated its contructor is the one that is been called first 
+
+
+
+
+
+
+
+I began with the basics of Angular, exploring components and their structure. 
+I then looked into rendering dynamic data, setting dynamic properties and attributes, and also some  handling events.
+
+I also looked into how data models communicate with view templates, and one interesting I noticed was Angular's change detection mechanism
+
+Which basically checks for changes in the component data and updates the view emplate.
+and these chnage can be triggred manully or through some asynchronous events. 
+
+and also the change dection involves a tree of componenets where each conponenets tracks chnages to its properties 
+ and it uses zones for that, specifically zone.js, to intercept asynchronous operations like user intractions or http request.
+
+but the angular 18 alows you to  handle change detection without the Zone.js. which signals is the alternative
+so with the signals they directly notify Angular of data changes without relying on the zone mechanism. but am yet to dive more into that. 
+
+ also realized the change detection is based on unidirectional data flow. which bassically mean data flowing in one direction so when data changes in a component, 
+ Angular updates the view to reflect those changes. it is done, by triggering the change detection cycle, which check each componenet in a specific sequence.
+
+also looked into how angular check for chnages.
+1. checks the componenets properties i.e checking  if properties on each component have changed.
+2. Checks Input Properties of Child Components.
+3. the expressions in the template are evaluated to see if they produce a different result than before.
+
+
+Also Looked into some change detection startgies 
+
+and realzied angular has two main change detection strategies, which is the default and the onPush:
+
+so bassically with the default strategy, Angular will check the entire component tree when a change detection cycle is triggered and 
+i realized that is generally the default setting for most components.
+
+and the second is the OnPush: 
+and with that strategy, Angular skips the component unless:
+The component’s inputs have changed or 
+An event is triggered within the component (like a user interaction).
+A manual change detection cycle is triggered.
+
+and i noticed the onpush improve performance because Angular only re-renders the component when necessary that is reducing the number of checks.
+
+
