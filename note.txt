@@ -55,3 +55,19 @@ A manual change detection cycle is triggered.
 and i noticed the onpush improve performance because Angular only re-renders the component when necessary that is reducing the number of checks.
 
 
+
+
+
+
+Yesterday, I continued exploring Angular’s change detection system, and I looked into some directive specifically the structual directive and how the syntax has chnage base  on the version of
+angular, how the legacy version were using the ngif and the latest version uses @if and also introducing the @else 
+i also look into some decorators specifically on some property decorators like @Input and @Output and their responsiveness to change detection.
+
+I realized that when passing complex data types, such as arrays or objects, to @Input properties, you've to be cautious about mutations. 
+because the angular’s change detection primarily relies on reference comparisons rather than deep property checks within objects or arrays. 
+which bassically means that the internal changes to an array or object won’t trigger change detection unless the reference itself changes.
+
+so i tried my hand on it and i realized ensure Angular detects updates particularly in cases like that, you can reassign  a new array or object reference 
+after the modifications and it will notify Angular of the change, ensuring the change detection picks it up.
+
+so that will be all for me. 
