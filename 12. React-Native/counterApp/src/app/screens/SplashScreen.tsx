@@ -10,7 +10,7 @@ export default function SplashScreen() {
 }  
 const style = StyleSheet.create({
     splashscreen:{
-        backgroundColor: "black",
+        backgroundColor: "white",
         color: "white",
     }
   })
