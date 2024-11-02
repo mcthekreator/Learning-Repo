@@ -71,3 +71,69 @@ so i tried my hand on it and i realized ensure Angular detects updates particula
 after the modifications and it will notify Angular of the change, ensuring the change detection picks it up.
 
 so that will be all for me. 
+
+
+
+
+Onchanges: it is called before the oninit if you.ve an input value 
+triggers whenever any input property changes.
+
+ngOnInit method runs after Angular has initialized all the component inputs with their initial values
+
+ngDoCheck lifecycle hook is called every time Angular runs change detection for a component. I realized it is very useful when implementing
+a custom change detection logic like detecting changes in complex data structures, 
+such as objects and arrays since internal changes to an array or object won’t trigger change detection unless the reference itself changes.
+
+
+ngAfterViewInit is a lifecycle hook that is called after Angular has fully initialized a component's view.
+ It s also useful in dom manupulations since it manupulates the elements in the components 
+since the view is fully initialized. It is also use in intergrating third party-libraries that requires the dom. 
+
+ngAfterContentInit method runs once after all the children nested inside the component (it’s content) have been initialized. 
+so cases where components accept dynamic content through content projection, 
+the ngAfterContentInit allows for the initialization of any logic that depends on this content.
+
+
+ngAfterViewChecked lifecycle hook is called after every change detection cycle when the component's view has been checked.
+his hook is primarily used to respond to changes in the component's view after the view has been checked
+
+
+ngAfterContentChecked lifecycle hook is called after every change detection cycle when the component’s content has been checked. 
+
+so i noticed some similairities with the ngAfterContentChecked and the ngAfterViewChecked and realizd that the ngAfterContentChecked handles 
+changes specifically in the content projected into your component. 
+For example, if you have a parent component projecting a dynamic list of items and you want to react whenever those items change, you can use that.
+while the ngAfterViewChecked react to changes in the entire view of the component, including all its children. 
+
+
+
+
+
+so i looked in to dependancy inject in angular, and learnt it bassically allows us to inject services arrow compoenents........
+i also descovered if you inject a service in a  componenet this something called the injector which  is responsible for 
+facilitating the interaction between the dependancy provider and the dependancy consumer 
+i.e the injector creates an instance of the dependancy and inject it into  a constructor in the component 
+const component - new  component ()
+
+
+
+
+
+
+
+two main types ( model injector Hierarchy andelement injector Hierarchy)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
