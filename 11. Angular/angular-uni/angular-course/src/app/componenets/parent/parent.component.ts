@@ -10,9 +10,7 @@ import {ChildComponent} from "../child/child.component";
 })
 export class ParentComponent {
   items = [1, 2, 3];
-  @HostListener('click', ['$event']) onClick(event: MouseEvent){
-    alert("button clicked ")
-  }
+
   modifyItems() {
     this.items = [...this.items, 4];
   }
