@@ -137,3 +137,102 @@ two main types ( model injector Hierarchy andelement injector Hierarchy)
 
 
 
+Okay, so for last friday I looked into ngModules
+so basicallly ngModule is a class that is uesd to orginzed angular application into cohesive blocks.
+It takes a metadata object that describes how to compile a 
+component's template and how to create an injector at runtime 
+
+so I looked into the properties in the metadata object 
+
+ 1. declarations is an array contains the components, directives, and pipes that belong to the module. 
+i descovered Items declared in declarations are private to that module unless they are exported.
+ you can declare a component, directive, or pipe in only one module. Declaring it in multiple modules causes a compilation error
+
+another property is 
+2. imports which is also an array that contains imported modules 
+e.g will be how we import the commonmodule in our componenets into order to access directives like ngif etc
+3. exports which is also and array that is use to make declarations from a modle to be avaliable to other modules 
+4. providers is also an array registers services that the module uses. which i find it intresting so I will be deeping more into that 
+5. bootstrap is also a property that only used in the root module (typically AppModule). 
+It specifies the root component that Angular should bootstrap when the application starts.
+
+
+Every Angular application has at least one module i.e root module also known as the app moudule
+
+so the root module provides the entry point for the application and bootstraps the root component. 
+
+also realized root module is somehow enough when working in an application with few components. 
+but when working on larger applications or as the application grows, you've to refactor the root 
+module into feature modules then import them into the root module.
+
+the feature module delivers a cohesive set of functionality focused on a specific application need 
+such as a user workflow, routing, or forms. While you can do everything within the root module, 
+feature modules help you partition the application into focused areas which bassically makes the application structure clear and scalable.
+
+
+
+
+declarations: Components, directives, and pipes that belong to the module.
+imports: Other modules that this module needs.
+exports: Components, directives, and pipes that can be used in other modules.
+providers: Services available throughout the module.
+bootstrap: The root component for bootstrapping the app (used only in the root module).
+
+
+
+
+
+
+
+
+
+A feature module is an organizational best practice, as opposed to a concept of the core Angular API. 
+A feature module delivers a cohesive set of functionality focused on a specific application 
+need such as a user workflow, routing, or forms. While you can do everything within the root module, 
+feature modules help you partition the application into focused areas
+
+ takes a metadata object that describes how to compile a 
+component's template and how to create an injector at runtime. It identifies the module's own 
+components, directives, and pipes, making some of them public, through the exports property, 
+so that external components can use them. @NgModule can also add service providers to the application dependency injectors.
+
+
+
+
+
+
+providing dependancies in modules
+shared modules
+core modules
+lazy-loaded modules
+signleton service
+
+
+
+
+
+
+NgModule: helps orginze the complex relationship between views such as componenets and directives to data providers such as servics and guards. 
+I works by allowing you to define all these relationships in a single file.
+
+the ngmodule metadata 
+1. declarration: where yuo will put componenets, directives or pipes and it will be privatly avaliable to that module
+2. Expotrs: components are privte by defualt but become public when you add them to export 
+3. imports: other modules get access to it by importing them in thier owen metadata 
+
+NB: declaratins, import and exports defined the relationship between components and how their shared between diffrent ngmodules 
+
+4. boostrap: it defines a component which is initially use to load your application. By default it is the app compoenent which is created b yht angula cli 
+5. providers: here is where you register data providers such as services and guards that can be injected in the component within the module. 
+The injectable class will  be avalbale to any  componenets in the moduleot any module that imports it. 
+
+
+
+
+
+
+
+So yesterday I looked into angular routing 
+In a client-side web application, such as a single-page application (SPA) built with Angular, 
+routing allows users to navigate between different views without actually loading a new HTML page from the server. 
+Instead, the application dynamically updates the content in the browser by loading the necessary components and data based on the requested route
