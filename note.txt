@@ -5,15 +5,7 @@ so there essential functions that are applied using the  @ symbol are they are c
 
 To enable them, you need to set the "experimentalDecorators": true flag in your tsconfig.json file
 
-
-
-
 so whena class in instanciated its contructor is the one that is been called first 
-
-
-
-
-
 
 
 I began with the basics of Angular, exploring components and their structure. 
@@ -229,10 +221,119 @@ The injectable class will  be avalbale to any  componenets in the moduleot any m
 
 
 
+shared module which is also known as the widget module its like the feature module but they add all their declarations to the exports
+so they can be distrubuted to other modules, 
+Realized it very helpful when working with spinners or icons, basically things tha will be used globally throught the project   
+
+Core Module: holds singleton services and application-wide logic and acts as a centralized functionality source.
+ I also realized It is only imported into the root AppModule to 
+prevent redundant or conflicting instances because it can be  accidentally imported into other feature modules.
+when working with it, using the @Optional() and @SkipSelf() in the constructor ensure that 
+Angular checks if the Core Module has already been loaded in the root module, preventing re-imports that might cause multiple instances of singletons.
+
+Lazy loading allows Angular to load specific modules only when they are needed, such as when the user navigates to a certain route
+and it optimizes application performance by reducing the initial load time.
+and its actually useful when working with feature modules that aren’t needed immediately when the application loads
+or some part of the application that is being accessed based on user interaction. 
+It is linked to routing so today I will be looking deep into that and routing as well. 
 
 
 
-So yesterday I looked into angular routing 
-In a client-side web application, such as a single-page application (SPA) built with Angular, 
-routing allows users to navigate between different views without actually loading a new HTML page from the server. 
-Instead, the application dynamically updates the content in the browser by loading the necessary components and data based on the requested route
+
+
+so the router module helps us navigate between diffrent view without actually loading a new HTML page from the server. 
+Also tried myy hands on come parent child route which is actaully a go to when working with dynamic URL parameter 
+Also tried my hands on some parent child routing and also some 404 error page. 
+
+also practiced on some guards, which actaully helps us for controlling access to diffrenet route of our application . 
+it used interfaces that implement to change the behaviour of the router
+
+1. the canActivate - Controls whether a route can be accessed or activated by a user.
+so with this it has a route and state as parameters and
+the route: provides route informatin, such as query params and 
+the state: representes the router state snapshot which contains the full url for which the navigation was initiated 
+and also it returns a boolean or a urltree.
+When a user tries to navigate to a route protected by CanActivate, Angular pauses the navigation and calls the guard. 
+If CanActivate returns true, navigation proceeds. If it returns false or a UrlTree, navigation is either stopped or redirected
+
+2. the CanActivateChild - Controls access to child routes within a parent route.
+so its just like the CanActivate but specifically for child routes. 
+so when parent route is accessible, but some child routes need additional checks, like roles or permissions
+
+
+
+
+
+looked into router module, navigate between different views without actually loading a new HTML page from the server. 
+the application dynamically updates the content in the browser by loading the necessary components and data based on the requested route
+
+I also tried my hand on some parent child route which is actaully a go to when working with dynamic  URL parameter.
+so when working with the child route, it listens to chnage in the URL paerameter and renders its corresponing page.
+so with that also you can use the activated route, which basically allows us to listen to chnage changes in the router.
+
+Also tried ma hands on an 404 error page, which with that in your router config. the path key the values is going to be ** and the conponents key value will be the coressponding component 
+
+Lazyloading: you configure the lazy loading in the rout config, and set the path. and with the loadehildern property simply means that the child routes should be loaded in an
+asynchronous way, s
+in the loadedchildren, use dynamic import which bassiaclyis using the import as the funtion 
+
+loadchildren: a an async function which returns a promise that when successfully evaluated give back it corresponing module. 
+
+
+
+also looked into gaurds its an angular service that has some special interfaces that implement to change the behaviour of the router
+and the comman use case is to protect the rout from unauthorized users 
+
+one of the interfaces of the guard is the canActivate, it returns a boolean which bassiacly is boolean with can be  a primitive or and observable or a promise
+and if its an observable it will automatically subscribe for you. 
+
+  
+
+
+
+
+with bassically give information about the state of the route. 
+and for the gaurd to work  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+CanActivateChild for Nested Route Security: Use CanActivateChild guards on parent routes to enforce guard logic across all child routes. This is particularly useful for admin or settings pages where access is restricted.
+
+
+
+
+
+
+
+
+3. the CanDeactivet - Determines if a user can navigate away from the current route so its basically
+ prevents users from leaving a route without fulfilling certain conditions. It is very useful when working with forms 
+ or editable pages cos it could prevent the users from accidentally navigating when their unsave change. 
+ so it also returns a boolean or observable. so if it returns true the navigation process and if it retuns false the it is blocked 
+ one of it use case that i tried is also to prompt a users when trying to navigate away from the page 
+
+
+4. the Canload - controls access to lazy-loaded modules. It's often used for protecting routes based on user roles or authentication status.
+Returns a boolean or Observable<boolean>.
+If true, the module loads; if false, loading is blocked.
+CanLoad doesn’t have access to route parameters (like :id), so it’s best suited for routes without parameters.
+
+5. resolvers, which can also preload data into your route so basicallyit retrieve data before the route activates
+It is similar to the can Activate but it returns a data that want to be avaliable when the router is navigated to. 
+ allows data to be fetched and made available to components without having to load spinners or make HTTP requests within the component itself
+
+ The resolver is a service implementing Resolve<T>.
+The resolver retrieves the data and provides it via the ActivatedRoute's data property.
+If data cannot be fetched, navigation can be redirected or an error can be shown.
