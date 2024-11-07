@@ -316,24 +316,28 @@ CanActivateChild for Nested Route Security: Use CanActivateChild guards on paren
 
 
 
-
-
 3. the CanDeactivet - Determines if a user can navigate away from the current route so its basically
  prevents users from leaving a route without fulfilling certain conditions. It is very useful when working with forms 
  or editable pages cos it could prevent the users from accidentally navigating when their unsave change. 
- so it also returns a boolean or observable. so if it returns true the navigation process and if it retuns false the it is blocked 
+ so it also returns a boolean or observable. so if it returns true the navigation proceeds and if it retuns false then it is blocked 
  one of it use case that i tried is also to prompt a users when trying to navigate away from the page 
-
 
 4. the Canload - controls access to lazy-loaded modules. It's often used for protecting routes based on user roles or authentication status.
 Returns a boolean or Observable<boolean>.
 If true, the module loads; if false, loading is blocked.
-CanLoad doesn’t have access to route parameters (like :id), so it’s best suited for routes without parameters.
+CanLoad doesn’t have access to route parameters (like :id) 
+beacuse it is designed to make decisions when loading the module
+and at that state there's no specific route context or parameters that are available because the module and its routes haven't been parsed or initialized.
+so it’s best suited for routes without parameters.
 
-5. resolvers, which can also preload data into your route so basicallyit retrieve data before the route activates
-It is similar to the can Activate but it returns a data that want to be avaliable when the router is navigated to. 
- allows data to be fetched and made available to components without having to load spinners or make HTTP requests within the component itself
+5. resolvers, which can also preload data into your route so basically it retrieve data before the route activates
+It is similar to the canActivate but it returns a data that want to be avaliable where the route is being navigated to. 
+allows data to be fetched and made available to components without having to loaders or  spinners.
 
- The resolver is a service implementing Resolve<T>.
 The resolver retrieves the data and provides it via the ActivatedRoute's data property.
 If data cannot be fetched, navigation can be redirected or an error can be shown.
+
+NB
+when working with multiple gaurds on a router,  
+order of guards in the route configuration impacts which guard Angular evaluates first. 
+If the first guard fails, Angular cancels navigation without checking the next guard
