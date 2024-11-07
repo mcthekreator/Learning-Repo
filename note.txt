@@ -341,3 +341,34 @@ NB
 when working with multiple gaurds on a router,  
 order of guards in the route configuration impacts which guard Angular evaluates first. 
 If the first guard fails, Angular cancels navigation without checking the next guard 
+
+
+
+
+
+
+
+
+
+
+
+
+Nx
+so when starting an nx project you will be presented with 
+so when you generate a workspace, all your projejct will be in the app directory
+and libs directory.
+the apps are the main entry point of for running applications. I descovered it is recommened that you 
+keep the appps directory as light as possible and allow the libs to do all the heavy lifting that are imported by each application,
+the toolas directory, is for srcipts that act on your code like db scripts or deply srcipts.
+theres also schematics dirctory in the tools that  nx uses to create and modify your existing code 
+
+so when adding a new project into your work space you can do that by running it the nrwl plugin and it will added is as a dev dependancy
+and then after you can us the nx generate to generate a new app. 
+it also generated a e2e foldeer for ened to end testing  which is written in cypress by default 
+
+
+so the lib directory cotaisn componenets that can be imported to your app projects 
+
+
+
+
