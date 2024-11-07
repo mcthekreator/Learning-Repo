@@ -1,5 +1,5 @@
 import { Component, inject } from '@angular/core';
-import { FormGroup,FormBuilder, Validators } from '@angular/forms';
+import { FormGroup, FormBuilder, Validators } from '@angular/forms';
 
 @Component({
   selector: 'org-monorepo-login',
@@ -10,12 +10,10 @@ export class LoginComponent {
   loginForm: FormGroup;
 
   private fb = inject(FormBuilder)
-  constructor(){
+  constructor() {
     this.loginForm = this.fb.group({
-      // username: ['', Validators.required],
-      // password: ['' , Validators.required],
+      username: ['', Validators.required],
+      password: ['', Validators.required],
     })
   }
-
-
 }
