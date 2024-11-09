@@ -7,7 +7,7 @@ import { FormBuilder, FormGroup } from '@angular/forms';
   styleUrl: './login.component.scss'
 })
 export class LoginComponent {
-  public loginForm:FormGroup;
+  public loginForm: FormGroup;
   private fb = inject(FormBuilder)
 
   constructor() {
@@ -20,7 +20,7 @@ export class LoginComponent {
   public login(): void {
     let loginData = this.loginForm.value;
     console.log(loginData);
-    
+
   }
 
 }

@@ -305,6 +305,19 @@ and for the gaurd to work
 
 
 
+AWS. 
+1. c corred
+2. b correct
+3. a
+4. D
+5. B
+6. a B
+7. a correct 
+8. c  correct 
+9. A,c correct 
+10. D correct 
+
+
 
 
 
@@ -353,21 +366,40 @@ If the first guard fails, Angular cancels navigation without checking the next g
 
 
 
-Nx
-so when starting an nx project you will be presented with 
+Nx : holds and multiple projects in asingle repo 
+
+setting it up is interactive becuase you select your preset, 
+and if you want the projects to be intergrated or standalone 
+you also select your package manager 
+
 so when you generate a workspace, all your projejct will be in the app directory
 and libs directory.
-the apps are the main entry point of for running applications. I descovered it is recommened that you 
-keep the appps directory as light as possible and allow the libs to do all the heavy lifting that are imported by each application,
-the toolas directory, is for srcipts that act on your code like db scripts or deply srcipts.
-theres also schematics dirctory in the tools that  nx uses to create and modify your existing code 
 
-so when adding a new project into your work space you can do that by running it the nrwl plugin and it will added is as a dev dependancy
-and then after you can us the nx generate to generate a new app. 
+the apps are the main entry point of for running applications and i contains all your projects.
+and the lib contains all your liberries or reeuasebale component. 
+
+I descovered it is recommened that you 
+keep the appps directory as light as possible and allow the libs to do all the heavy lifting that are imported by each application,
+
+the toolas directory, is for srcipts that act on your code like db scripts or deply srcipts.
+theres also schematics dirctory in the tools that nx uses to create and modify your existing code 
+
+so when adding a new project into your work space you can do that by running the nrwl plugin and adding your preset and 
+it will add is as a dev dependancy.
+
+and then after you can use the nx generate to generate a new app. 
 it also generated a e2e foldeer for ened to end testing  which is written in cypress by default 
 
+so the lib directory cotaians componenets or liberair and the compoenets can be exported from the index.ts file 
+and it can be refrenced by other libreries or apps
+and nx uses a lint rule to block other liberiees that is not explictily exported in the index.ts,  
 
-so the lib directory cotaisn componenets that can be imported to your app projects 
+one tool that i also discovered and is very useful when working when working on a larger project is the dep-graph 
+so when working on larger projcts it gonna hard to identify how the components depend on eah other so the nx cli 
+provides a dep-graph commad that provides a visual reperesntation of how the apps and liberiees depend of each other,
+and it is represented in a tree form. 
+
+it was all fun till. 
 
 
 
