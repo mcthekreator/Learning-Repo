@@ -1,15 +1,22 @@
 import { State } from "@ngxs/store";
-import { AnimalGet } from "../model/AnimalGet.model";
+import { AnimalAdd, AnimalGet } from "../model/AnimalGet.model";
+import { Injectable } from "@angular/core";
 
 export interface ZooStateModel{
     GetAnimal: AnimalGet[]
+    AddAnimal: AnimalAdd[]
 }
 
-@State({
-    name: "Zoo"
+@State<ZooStateModel>({
+    name: "Zoo",
+    defaults: {
+        GetAnimal: [],
+        AddAnimal: []
+    }
 })
 
 
+@Injectable()
 export class ZooState{
     animals: AnimalGet[] = [];
     loading: boolean = false;

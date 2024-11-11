@@ -427,3 +427,27 @@ and also each subscription that the Observable returns by HttpClient creates a n
 This is different from hot Observables which is basically observers with multiple subcribers, which share a single execution across subscribers.
 
 I will be looking into interceptors today. 
+
+
+
+
+
+
+
+
+cypress
+Time Travel: takes snapshots as your test runs. 
+after the the test has executed, you can see all screenshot in the commad log (hover and you will see the screenshots)
+which make sit easy to revew and debug 
+
+
+you can also see the satte of your application before and after the test has executed,
+and you see all the error message and statc traces with the commad windows ,
+
+automatic waits, you do not need to add waits, beecuase cypress takes care of all the 
+waits if you've some assertions 
+before moving, you can also add your own custom wiats. 
+
+it also has it own inbuilt test runner called - mocha
+
+describe : A function used to group related tests. It's a way to organize your test suite into logical blocks.
