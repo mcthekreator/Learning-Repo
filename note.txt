@@ -305,19 +305,6 @@ and for the gaurd to work
 
 
 
-AWS. 
-1. c corred
-2. b correct
-3. a
-4. D
-5. B
-6. a B
-7. a correct 
-8. c  correct 
-9. A,c correct 
-10. D correct 
-
-
 
 
 
@@ -404,3 +391,39 @@ it was all fun till.
 
 
 
+
+
+HTTP Client.
+is basically a  built-in service class that simplifies HTTP operations. 
+
+so how the HTTp client works is that it, delegates HTTP requests to a lower-level service called the HttpXhrBackend, 
+which handles browser-specific operations. so basically the HttpXhrBackend is responsible for performing the actual HTTP 
+requests using the browser’s built-in XMLHttpRequest API.
+
+so I discovered when a request is initiated  and the request method is invoked, it goes through some process and first 
+the HTTPClinet, it prepares the structure for the request and crates an observable and wraps it with the request logic 
+
+The constructed HttpRequest object is passed to the HttpHandler. 
+which is the HttpInterceptingHandler i.e when interceptors are registered.
+so the interceptors are just controller that ensures the request flows through them before reaching the HttpXhrBackend.
+Each interceptor’s intercept() method wraps the next.handle() call. 
+This means the request passes through each interceptor in sequence, modifying or adding properties as necessary.
+
+The last handler in the chain is typically HttpXhrBackend, which is responsible for the actual network call using XMLHttpRequest.
+
+also discovered 
+
+the HTTPclient set automtic headers, so depending on the request method and body, HttpClient may automatically set headers 
+(e.g., Content-Type: application/json for JSON payloads).
+
+also discovered
+
+HttpClient uses RxJS Observables to manage asynchronous data flows which allows developers to handle complex asynchronous pattern.
+and It uses the RxJS observable-based APIs, which means it returns the observable and what we need to subscribe to it. 
+
+also discovered that 
+espicially when you've a get request The Observable it returns is cold. This means that it won’t emit any data until you subscribed to it.
+and also each subscription that the Observable returns by HttpClient creates a new network request. 
+This is different from hot Observables which is basically observers with multiple subcribers, which share a single execution across subscribers.
+
+I will be looking into interceptors today. 
