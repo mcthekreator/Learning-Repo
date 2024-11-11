@@ -22,13 +22,15 @@ export class LoginComponent implements OnInit {
     });
   }
 
-   ngOnInit(): void {
+  ngOnInit(): void {
     this.login()
+
   }
 
   public login(): void {
     let loginData = this.loginForm.value;
     console.log(loginData);
+    this.store.dispatch(new AddAnimal(loginData))
     this.router.navigate(['/home'])
 
   }
