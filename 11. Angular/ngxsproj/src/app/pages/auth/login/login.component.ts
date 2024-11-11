@@ -1,7 +1,7 @@
 import { Component, inject, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup } from '@angular/forms';
 import { Router } from '@angular/router';
-import { AddAnimal } from '../../../store/animal.actions';
+import { AddAnimal, GetAnimal } from '../../../store/animal.actions';
 import { Store } from '@ngxs/store';
 
 @Component({
@@ -24,6 +24,8 @@ export class LoginComponent implements OnInit {
 
   ngOnInit(): void {
     this.login()
+    this.getUsers()
+    
 
   }
 
@@ -32,7 +34,9 @@ export class LoginComponent implements OnInit {
     console.log(loginData);
     this.store.dispatch(new AddAnimal(loginData))
     this.router.navigate(['/home'])
-
   }
 
+  public getUsers(){
+    this.store.dispatch(new GetAnimal())
+  }
 }
