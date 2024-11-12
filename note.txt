@@ -451,3 +451,51 @@ before moving, you can also add your own custom wiats.
 it also has it own inbuilt test runner called - mocha
 
 describe : A function used to group related tests. It's a way to organize your test suite into logical blocks.
+
+
+
+
+
+
+
+interceptor:
+ act as middleware for HTTP requests and responses. 
+ They allow you to modify or handle HTTP operations globally,
+
+Angular constructs a chain of interceptors. Each interceptor implements the HttpInterceptor interface and uses the intercept() method to handle requests.
+and this  chain of interceptors is created when the Angular application initializes, based on the order of registration in the module.
+
+so order in ehich the interceptor is registered in the providers array affects how requests are processed and how responses 
+flow back through the interceptors. 
+so you've to be concious about how the interceptos is ordered in the providers 
+If interceptors anyhow, it can lead to unexpected behavior.
+
+and also 
+When HttpClient makes a request, it passes the request through each registered interceptor in sequence.
+Each interceptor receives the HttpRequest object and can clone or modify it before forwarding it to the next interceptor via next.handle() method.
+
+Once the request reaches the server and the response comes back, the interceptors process the response in reverse order.
+Each interceptor can inspect, modify, or handle the response and errors before it reaches the HttpClient consumer.
+
+so in  this case 
+HttpClient -> AuthInterceptor -> LoggingInterceptor -> Server
+Server -> LoggingInterceptor -> AuthInterceptor -> HttpClient
+
+ interceptors use RxJS Observables to handle asynchronous operations. The next.handle() method returns an Observable<HttpEvent>, 
+ allowing the interceptor to hook into the response pipeline using operators like map, tap, or catchError.
+
+ Angular's HttpRequest objects are immutable. When you modify a request (e.g., adding a header), you need to clone it using req.clone(). 
+ This design ensures that any changes made in one interceptor don’t affect the original request, preserving request safety
+
+
+
+ 
+
+
+ Trickiness: If an interceptor makes a new HTTP request (e.g., to refresh a token), there is a risk of creating an infinite loop where the interceptor continuously intercepts its own request.
+Tip: Use flags or conditions to bypass certain logic when a request matches the one triggered by the interceptor itself. For example:
+typescript
+Copy code
+if (req.url.includes('/refresh-token')) {
+  return next.handle(req);
+}

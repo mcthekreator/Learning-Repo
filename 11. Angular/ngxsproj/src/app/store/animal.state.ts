@@ -1,8 +1,9 @@
-import { State } from "@ngxs/store";
+import { Action, Selector, State, StateContext } from "@ngxs/store";
 import { AnimalAdd, AnimalGet } from "../model/AnimalGet.model";
 import { Injectable } from "@angular/core";
+import { GetAnimal } from "./animal.actions";
 
-export interface ZooStateModel{
+export interface ZooStateModel {
     GetAnimal: AnimalGet[]
     AddAnimal: AnimalAdd[]
 }
@@ -15,18 +16,16 @@ export interface ZooStateModel{
     }
 })
 
-
 @Injectable()
-export class ZooState{
-    animals: AnimalGet[] = [];
-    loading: boolean = false;
-    error: string = "";
-    filter: string = "";
-    page: number = 1;
-    pageSize: number = 10;
-    sortOrder: string = "asc";
-    sortField: string = "id";
-    totalPages: number = 0;
-    totalItems: number = 0;
+
+export class ZooState {
+ @Selector()
+ static getAnimals(state: ZooStateModel): AnimalGet[] {
+     return state.GetAnimal
+ }
+ @Action(GetAnimal)
+ getAnimalStateAction(ctx:StateContext){
+
+ }
 }
 

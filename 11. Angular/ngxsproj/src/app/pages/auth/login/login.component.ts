@@ -25,8 +25,6 @@ export class LoginComponent implements OnInit {
   ngOnInit(): void {
     this.login()
     this.getUsers()
-    
-
   }
 
   public login(): void {
@@ -36,7 +34,7 @@ export class LoginComponent implements OnInit {
     this.router.navigate(['/home'])
   }
 
-  public getUsers(){
+  public getUsers() {
     this.store.dispatch(new GetAnimal())
   }
 }
