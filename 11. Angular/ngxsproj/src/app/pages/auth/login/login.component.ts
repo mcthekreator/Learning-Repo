@@ -2,7 +2,11 @@ import { Component, inject, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup } from '@angular/forms';
 import { Router } from '@angular/router';
 import { AddAnimal, GetAnimal } from '../../../store/animal.actions';
-import { Store } from '@ngxs/store';
+import { select, Store } from '@ngxs/store';
+import { ZooState } from '../../../store/animal.state';
+import { AnimalGet } from '../../../model/AnimalGet.model';
+import { Observable } from 'rxjs';
+
 
 @Component({
   selector: 'app-login',
@@ -24,7 +28,7 @@ export class LoginComponent implements OnInit {
 
   ngOnInit(): void {
     this.login()
-    this.getUsers()
+    this.getAnimal()
   }
 
   public login(): void {
@@ -34,7 +38,13 @@ export class LoginComponent implements OnInit {
     this.router.navigate(['/home'])
   }
 
-  public getUsers() {
+  @select(ZooState.getAnimalSelector) getAnimalOb$: Observable<AnimalGet[]>
+  public getAnimal() {
     this.store.dispatch(new GetAnimal())
+    this.getAnimaalOb$?.subscribe((res:any) =>{
+      console.log(res);
+      
+
+    })
   }
 }

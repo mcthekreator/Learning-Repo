@@ -499,3 +499,36 @@ Copy code
 if (req.url.includes('/refresh-token')) {
   return next.handle(req);
 }
+
+
+
+
+
+
+
+
+Structural Directives
+Hierarchical Injector
+@NgModule
+host, host-context, etc.
+@NgPlural and other i18n features
+Angular Elements
+Angular Standalone Components
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
