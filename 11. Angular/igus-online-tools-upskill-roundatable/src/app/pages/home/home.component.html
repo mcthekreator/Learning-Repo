@@ -1,7 +1,28 @@
-<div class="profile-card">
-    <app-profile/>
-    <app-profile/>
-    <app-profile/>
-    <app-profile/>
-    <app-profile/>
-</div>
+<!-- For directive -->
+<!-- <div class="profile-card">
+    <div *ngFor="let user of users">
+        <app-profile [name]="user.name" [username]="user.email"></app-profile>
+    </div>
+</div> -->
+
+<!-- If diective -->
+ <!-- <div *ngIf="users.length > 0; ">
+    <div *ngFor="let user of users">
+        <app-profile [name]="user.name" [username]="user.email"></app-profile>
+    </div>
+ </div> -->
+
+
+<!-- If diective -->
+ <!-- <div *ngIf="users.length < 0; else noUsers">
+    <div *ngFor="let user of users">
+        <app-profile [name]="user.name" [username]="user.email"></app-profile>
+    </div>
+ </div>
+
+<ng-template #noUsers>
+    <h1>no data found</h1>
+</ng-template> -->
+
+
+<!-- ngSwitch -->
