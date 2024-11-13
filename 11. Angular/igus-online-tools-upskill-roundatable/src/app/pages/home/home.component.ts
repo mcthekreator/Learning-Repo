@@ -10,6 +10,7 @@ import { ProfileInterface } from '../../shared/model/profile-interface';
 export class HomeComponent {
   private profileService = inject(ProfileService)
   public users: ProfileInterface[] = []
+  public  viewMode: number = 2;
 
   constructor() {
     this.getProfile()
@@ -20,4 +21,6 @@ export class HomeComponent {
 
     })
   }
+
+
 }

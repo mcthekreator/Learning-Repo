@@ -1,0 +1,27 @@
+Angular structural directives are directives that change the structure of the DOM. They can add, remove, or replace elements.
+
+
+*ngIf – conditionally includes a template depending on the value of an expression returned by a Boolean.
+*ngFor – makes it simple to iterate over an array.
+*ngSwitch – renders each matching view.
+
+
+Structural directives rely on two main Angular classes:
+
+TemplateRef: Represents an embedded template that can be used to create views dynamically and also It provides access to the template's content.
+
+and the 
+
+ViewContainerRef: Represents a container where one or more views can be attached. and It  is also responsible for inserting and moving or removing embedded views from the DOM.
+
+so when angular sees a structral directive with is prefixed with an asterix
+it complies it into an <ng-template> structure, which consit of the host element and its content.
+
+and with the TemplateRef which will be pointing to the ng-template and ViewContainerRef referring to the parent container.
+
+then 
+the directive’s logic uses the ViewContainerRef to control the embedded views.
+For example, *ngIf evaluates the condition and, if true, creates an embedded view using viewContainer.createEmbeddedView(templateRef). If the condition is false, it clears the view with viewContainer.clear().
+Change Detection: When the condition or context changes, the structural directive recalculates and either creates or removes views as necessary.
+
+

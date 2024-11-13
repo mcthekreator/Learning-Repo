@@ -6,7 +6,7 @@
 </div> -->
 
 <!-- If diective -->
- <!-- <div *ngIf="users.length > 0; ">
+<!-- <div *ngIf="users.length > 0; ">
     <div *ngFor="let user of users">
         <app-profile [name]="user.name" [username]="user.email"></app-profile>
     </div>
@@ -14,7 +14,7 @@
 
 
 <!-- If diective -->
- <!-- <div *ngIf="users.length < 0; else noUsers">
+<!-- <div *ngIf="users.length < 0; else noUsers">
     <div *ngFor="let user of users">
         <app-profile [name]="user.name" [username]="user.email"></app-profile>
     </div>
@@ -26,3 +26,17 @@
 
 
 <!-- ngSwitch -->
+<!-- <div [ngSwitch]="viewMode">
+    <div *ngSwitchCase="1">List View Selected</div>
+    <div *ngSwitchCase="2">Grid View Selected</div>
+    <div *ngSwitchCase="3">Table View Selected</div>
+    <div *ngSwitchDefault>No View Selected</div>
+</div> -->
+
+
+<!-- Custom Directive -->
+ <section *appHideAfter = 5000>
+    <div *ngFor="let user of users">
+        <app-profile [name]="user.name" [username]="user.email"></app-profile>
+    </div>
+ </section>
