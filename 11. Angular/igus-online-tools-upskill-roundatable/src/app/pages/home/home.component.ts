@@ -1,6 +1,8 @@
 import { Component, inject } from '@angular/core';
 import { ProfileService } from '../../shared/service/profile.service';
 import { ProfileInterface } from '../../shared/model/profile-interface';
+import { PostsService } from '../../shared/service/posts.service';
+import { PostsInterface } from '../../shared/model/posts';
 
 @Component({
   selector: 'app-home',
@@ -9,15 +11,26 @@ import { ProfileInterface } from '../../shared/model/profile-interface';
 })
 export class HomeComponent {
   private profileService = inject(ProfileService)
+  private postService = inject(PostsService)
   public users: ProfileInterface[] = []
-  public viewMode: number = 2;
+  public posts: PostsInterface[] = []
+  public viewMode: string = 'users';
+  public condition: boolean = false;
 
   constructor() {
     this.getProfile()
+    this.getPosts()
   }
   private getProfile() {
     this.profileService.getProfiles().subscribe((profile: ProfileInterface[]) => {
       this.users = profile
+
+    })
+  }
+  
+  private getPosts() {
+    this.postService.getPosts().subscribe((post: PostsInterface[]) => {
+      this.posts = post
 
     })
   }

@@ -11,6 +11,8 @@ import { MatCardModule } from '@angular/material/card';
 import { HttpClientModule } from '@angular/common/http';
 import { CommonModule } from '@angular/common';
 import { HideAfterDirective } from './directive/hide-after.directive';
+import { PostsComponent } from './components/posts/posts.component';
+import { IfForDirective } from './directive/if-for.directive';
 
 @NgModule({
   declarations: [
@@ -18,6 +20,9 @@ import { HideAfterDirective } from './directive/hide-after.directive';
     HomeComponent,
     ProfileComponent,
     HideAfterDirective,
+    PostsComponent,
+    IfForDirective
+
 
   ],
   imports: [
@@ -31,6 +36,7 @@ import { HideAfterDirective } from './directive/hide-after.directive';
   providers: [
     provideAnimationsAsync()
   ],
+  exports: [IfForDirective],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

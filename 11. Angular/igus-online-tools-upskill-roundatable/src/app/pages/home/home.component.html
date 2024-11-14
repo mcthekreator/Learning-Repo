@@ -26,17 +26,25 @@
 
 
 <!-- ngSwitch -->
-<!-- <div [ngSwitch]="viewMode">
-    <div *ngSwitchCase="1">List View Selected</div>
-    <div *ngSwitchCase="2">Grid View Selected</div>
-    <div *ngSwitchCase="3">Table View Selected</div>
+<!-- <section [ngSwitch]="viewMode">
+    <div *ngSwitchCase="'posts'">
+        <div *ngFor="let post of posts">
+            <app-posts [title]="post.title" [message]="post.body"></app-posts>
+        </div>
+    </div>
+    <div *ngSwitchCase="'users'">
+        <div *ngFor="let user of users">
+            <app-profile [name]="user.name" [username]="user.email"></app-profile>
+        </div>
+    </div>
     <div *ngSwitchDefault>No View Selected</div>
-</div> -->
+</section> -->
 
 
 <!-- Custom Directive -->
- <section *appHideAfter = 5000>
-    <div *ngFor="let user of users">
-        <app-profile [name]="user.name" [username]="user.email"></app-profile>
+<section>
+    <div *appIfFor="let user of users; condition: condition">
+      <app-profile [name]="user.name" [username]="user.email"></app-profile>
     </div>
- </section>
+  </section>
+  

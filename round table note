@@ -47,6 +47,10 @@ html
 <div [ngSwitch]="userRole"> <div *ngSwitchCase="'admin'">Welcome, Admin!</div> <div *ngSwitchCase="'user'">Hello, User!</div> <div *ngSwitchCase="'guest'">Greetings, Guest!</div> <div *ngSwitchDefault>Access Restricted</div> </div>
 
 
+<!-- one Directive per element  -->
+An intuitive way to do that is to put both an *ngFor and an *ngIf on the same element. However, since both *ngFor and *ngIf are structural directives, this would be treated as an error by the compiler. You may apply only one structural directive to an element.
+
+
 <!-- custom directive -->
 ElementRef: Provides a reference to the element the directive is applied to.
 Renderer2: Safely manipulates DOM properties (better practice than directly accessing nativeElement).
