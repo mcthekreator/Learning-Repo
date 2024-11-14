@@ -1,40 +1,42 @@
+when angular see an * beforee a directive name, it creates a template ad wrappes the
+view of the strutural directive and moves the structural directive on that template.
+and in that template wrapper the strucutral directive is used as an attribute directive.
 
-when angular see an * beforee a directive name, it creates  a template ad wrappes the 
-view of the strutural directive and moves the structural directive on that template. 
-and in that template wrapper the strucutral directive is used as an attribute directive. 
- 
 
 
 <!-- ng for -->
- Item : The local template variable that represents each item in the array.
- Items: The array or iterable being iterated over.
- 
- 
- By default, *ngFor uses object identity to detect changes when the array is modified. This can lead to inefficient re-rendering. To improve performance, use the trackBy function to identify unique items.
- 
- trackById(index: number, item: any): number { return item.id; // or a unique property of the item 
- 
+Item : The local template variable that represents each item in the array.
+Items: The array or iterable being iterated over.
 
- <!-- ng If -->
- condition: A Boolean expression that evaluates to true or false. If it’s true, the content is rendered; if false, the content is removed from the DOM. 
- 
- 
- Using *ngIf with else
- You can use the else clause to display an alternative template when the condition is false:
- 
- <div *ngIf="isLoggedIn; else loggedOutTemplate">
-   Welcome back, user!
- </div>
- <ng-template #loggedOutTemplate>
-   <p>Please log in to continue.</p>
- </ng-template>
- 
- #loggedOutTemplate is an ng-template reference that provides a fallback template. 
- 
- <!-- ngSwitch -->
+
+By default, *ngFor uses object identity to detect changes when the array is modified. This can lead to inefficient
+re-rendering. To improve performance, use the trackBy function to identify unique items.
+
+trackById(index: number, item: any): number { return item.id; // or a unique property of the item
+
+
+<!-- ng If -->
+condition: A Boolean expression that evaluates to true or false. If it’s true, the content is rendered; if false, the
+content is removed from the DOM.
+
+
+Using *ngIf with else
+You can use the else clause to display an alternative template when the condition is false:
+
+<div *ngIf="isLoggedIn; else loggedOutTemplate">
+  Welcome back, user!
+</div>
+<ng-template #loggedOutTemplate>
+  <p>Please log in to continue.</p>
+</ng-template>
+
+#loggedOutTemplate is an ng-template reference that provides a fallback template.
+
+<!-- ngSwitch -->
 
 2. Basic Syntax and Structure
-*ngSwitch is used with the [ngSwitch] directive on a parent container and *ngSwitchCase for each possible condition. An *ngSwitchDefault can be used for fallback content.
+*ngSwitch is used with the [ngSwitch] directive on a parent container and *ngSwitchCase for each possible condition. An
+*ngSwitchDefault can be used for fallback content.
 
 3. How It Works
 [ngSwitch]: Evaluates the given expression.
@@ -44,21 +46,36 @@ and in that template wrapper the strucutral directive is used as an attribute di
 4. Using *ngSwitch with Different Types of Cases
 *ngSwitch can handle cases with different types of values such as strings, numbers, or even variables.
 html
-<div [ngSwitch]="userRole"> <div *ngSwitchCase="'admin'">Welcome, Admin!</div> <div *ngSwitchCase="'user'">Hello, User!</div> <div *ngSwitchCase="'guest'">Greetings, Guest!</div> <div *ngSwitchDefault>Access Restricted</div> </div>
+<div [ngSwitch]="userRole">
+  <div *ngSwitchCase="'admin'">Welcome, Admin!</div>
+  <div *ngSwitchCase="'user'">Hello, User!</div>
+  <div *ngSwitchCase="'guest'">Greetings, Guest!</div>
+  <div *ngSwitchDefault>Access Restricted</div>
+</div>
 
 
 <!-- one Directive per element  -->
-An intuitive way to do that is to put both an *ngFor and an *ngIf on the same element. However, since both *ngFor and *ngIf are structural directives, this would be treated as an error by the compiler. You may apply only one structural directive to an element.
+An intuitive way to do that is to put both an *ngFor and an *ngIf on the same element. However, since both *ngFor and
+*ngIf are structural directives, this would be treated as an error by the compiler. You may apply only one structural
+directive to an element.
 
 
 <!-- custom directive -->
 ElementRef: Provides a reference to the element the directive is applied to.
 Renderer2: Safely manipulates DOM properties (better practice than directly accessing nativeElement).
-@HostListener: Listens to host element events and triggers functions. 
+@HostListener: Listens to host element events and triggers functions.
 
 Use the directive in a template:
 html
 <p appHighlight="lightblue">Hover over this text to see the effect!</p>
+
+<!-- creating a structural directive.  -->
+so when creating a structural directive we need two things.
+1. access to the dom element we chage to modify
+2. A place where we want to add or remove the DOM element
+
+
+
 
 
 <!-- herarchical injector -->
@@ -72,10 +89,7 @@ If the service is not found in any injector, Angular throws an error indicating 
 
 4. Providing Services at Different Levels
 AppModule (Root Level): Services provided here are singleton and shared across the entire app.
-NgModule (Feature Module): Providing services in feature modules can scope them to the module, avoiding shared instances with other modules.
-Component Level: Providing services at the component level creates new instances each time the component is used. This approach is useful for scenarios requiring unique service instances for each component.
-
-
-
-
- 
+NgModule (Feature Module): Providing services in feature modules can scope them to the module, avoiding shared instances
+with other modules.
+Component Level: Providing services at the component level creates new instances each time the component is used. This
+approach is useful for scenarios requiring unique service instances for each component.
