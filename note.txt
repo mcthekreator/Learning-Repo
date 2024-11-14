@@ -520,15 +520,30 @@ Angular Standalone Components
 
 
 
+Daily Stand up
 
+design pattern used to create and manage dependencies in an application, so it allows an object to 
+receive its dependencies from an external source rather than creating them internally.
 
+and in angular 
+Angular's DI framework is responsible for creating, maintaining, and also injecting dependencies automatically. 
+and their typically services or classes that a component or another service depends on.
+which actually is very useful because it decouples components and services, which makes the code more modular and maintainable.
 
+also Angualr's Dependancy Injection has two key compoenent i.e 
+the providers and 
+the injetors 
 
+so the providers are responsible for configurations or instructions that tell the Angular's DI how to create and supply a dependency. 
+and the 
+Injectors are the mechanisms or containers which are responsible for creating instances of dependencies based on the registered providers and injecting them where needed.
 
+so basically 
+the Providers describe how to create dependencies.
+and the Injectors are tools that use those providers to inject dependencies into components or services.
 
+and also
+Angular’s DI has a hierarchical structure. so with a that 
+there’s a root injector which is created when the app starts, and the child injectors are created based on module or component scope.
 
-
-
-
-
-
+which is part of my presentation so we will be looking more into that when i present.

@@ -1,27 +1,77 @@
-Angular structural directives are directives that change the structure of the DOM. They can add, remove, or replace elements.
+
+when angular see an * beforee a directive name, it creates  a template ad wrappes the 
+view of the strutural directive and moves the structural directive on that template. 
+and in that template wrapper the strucutral directive is used as an attribute directive. 
+ 
 
 
-*ngIf – conditionally includes a template depending on the value of an expression returned by a Boolean.
-*ngFor – makes it simple to iterate over an array.
-*ngSwitch – renders each matching view.
+<!-- ng for -->
+ Item : The local template variable that represents each item in the array.
+ Items: The array or iterable being iterated over.
+ 
+ 
+ By default, *ngFor uses object identity to detect changes when the array is modified. This can lead to inefficient re-rendering. To improve performance, use the trackBy function to identify unique items.
+ 
+ trackById(index: number, item: any): number { return item.id; // or a unique property of the item 
+ 
+
+ <!-- ng If -->
+ condition: A Boolean expression that evaluates to true or false. If it’s true, the content is rendered; if false, the content is removed from the DOM. 
+ 
+ 
+ Using *ngIf with else
+ You can use the else clause to display an alternative template when the condition is false:
+ 
+ <div *ngIf="isLoggedIn; else loggedOutTemplate">
+   Welcome back, user!
+ </div>
+ <ng-template #loggedOutTemplate>
+   <p>Please log in to continue.</p>
+ </ng-template>
+ 
+ #loggedOutTemplate is an ng-template reference that provides a fallback template. 
+ 
+ <!-- ngSwitch -->
+
+2. Basic Syntax and Structure
+*ngSwitch is used with the [ngSwitch] directive on a parent container and *ngSwitchCase for each possible condition. An *ngSwitchDefault can be used for fallback content.
+
+3. How It Works
+[ngSwitch]: Evaluates the given expression.
+*ngSwitchCase: Renders its associated content if its value matches the value of [ngSwitch].
+*ngSwitchDefault: Renders if none of the *ngSwitchCase values match.
+
+4. Using *ngSwitch with Different Types of Cases
+*ngSwitch can handle cases with different types of values such as strings, numbers, or even variables.
+html
+<div [ngSwitch]="userRole"> <div *ngSwitchCase="'admin'">Welcome, Admin!</div> <div *ngSwitchCase="'user'">Hello, User!</div> <div *ngSwitchCase="'guest'">Greetings, Guest!</div> <div *ngSwitchDefault>Access Restricted</div> </div>
 
 
-Structural directives rely on two main Angular classes:
+<!-- custom directive -->
+ElementRef: Provides a reference to the element the directive is applied to.
+Renderer2: Safely manipulates DOM properties (better practice than directly accessing nativeElement).
+@HostListener: Listens to host element events and triggers functions. 
 
-TemplateRef: Represents an embedded template that can be used to create views dynamically and also It provides access to the template's content.
-
-and the 
-
-ViewContainerRef: Represents a container where one or more views can be attached. and It  is also responsible for inserting and moving or removing embedded views from the DOM.
-
-so when angular sees a structral directive with is prefixed with an asterix
-it complies it into an <ng-template> structure, which consit of the host element and its content.
-
-and with the TemplateRef which will be pointing to the ng-template and ViewContainerRef referring to the parent container.
-
-then 
-the directive’s logic uses the ViewContainerRef to control the embedded views.
-For example, *ngIf evaluates the condition and, if true, creates an embedded view using viewContainer.createEmbeddedView(templateRef). If the condition is false, it clears the view with viewContainer.clear().
-Change Detection: When the condition or context changes, the structural directive recalculates and either creates or removes views as necessary.
+Use the directive in a template:
+html
+<p appHighlight="lightblue">Hover over this text to see the effect!</p>
 
 
+<!-- herarchical injector -->
+When a component or service requests a dependency:
+Angular first looks for the dependency in the component's injector.
+If not found, it searches up the hierarchy until it reaches the root injector.
+If the service is not found in any injector, Angular throws an error indicating an unresolvable dependency.
+
+
+
+
+4. Providing Services at Different Levels
+AppModule (Root Level): Services provided here are singleton and shared across the entire app.
+NgModule (Feature Module): Providing services in feature modules can scope them to the module, avoiding shared instances with other modules.
+Component Level: Providing services at the component level creates new instances each time the component is used. This approach is useful for scenarios requiring unique service instances for each component.
+
+
+
+
+ 

@@ -10,3 +10,8 @@ import {Component, Input} from '@angular/core';
 export class ChildComponent {
   @Input() items: number[] = [];
 }
+
+
+
+
+
