@@ -15,7 +15,7 @@ export class HomeComponent {
   public users: ProfileInterface[] = []
   public posts: PostsInterface[] = []
   public viewMode: string = 'users';
-  public condition: boolean = false;
+  public condition: boolean = true;
 
   constructor() {
     this.getProfile()
@@ -27,7 +27,7 @@ export class HomeComponent {
 
     })
   }
-  
+
   private getPosts() {
     this.postService.getPosts().subscribe((post: PostsInterface[]) => {
       this.posts = post

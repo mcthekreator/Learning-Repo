@@ -42,8 +42,8 @@
 
 
 <!-- Custom Directive -->
-<section>
-    <div *appIfFor="let user of users; condition: condition">
+<section >
+    <div *ngFor="let user of users">
       <app-profile [name]="user.name" [username]="user.email"></app-profile>
     </div>
   </section>
