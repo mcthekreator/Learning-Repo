@@ -547,3 +547,29 @@ Angular’s DI has a hierarchical structure. so with a that
 there’s a root injector which is created when the app starts, and the child injectors are created based on module or component scope.
 
 which is part of my presentation so we will be looking more into that when i present.
+
+
+Daily stand up <Observables>
+obersavbles repesent sequence of data and can be observed over time 
+and their used for handling asynchronous data 
+but we can also use promises for handling asynchronous data as well. 
+but there some uses you will use obsrvales over promises because promises return a single value 
+whill obersavles can return multiple values.
+
+Oberservable pattern 
+with that we have the 
+1. Oberservable which is also Event Emitter: which basically triggers the event.
+2, oberserver which is also the event listener or subscriber: 
+which basically listen to the event 
+3. handler: which is  handle the event. 
+ 
+
+also when you create an obersavble it emits three events. 
+1. Next : he next() method is used to emit values to the subscribers and it is also 
+the primary way for an observable to send data.
+2. error : The error() method is used to signal that an 
+error has occurred during the observable’s execution.
+3. Completion : The complete() method indicates that the 
+observable has finished sending values. 
+so after the complete method no futher calls
+like the next and error will be made. 

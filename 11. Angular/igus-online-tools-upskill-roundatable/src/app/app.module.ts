@@ -9,18 +9,20 @@ import { HttpClientModule } from '@angular/common/http';
 import { CommonModule } from '@angular/common';
 import { PostsComponent } from './components/posts/posts.component';
 import { SharedModule } from './modules/shared.module';
+import { ProfileComponent } from './components/profile/profile.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     PostsComponent,
+    ProfileComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     HttpClientModule,
     CommonModule,
-    SharedModule
+SharedModule
   ],
   providers: [
     provideAnimationsAsync()
