@@ -15,13 +15,14 @@ import { ProfileComponent } from './components/profile/profile.component';
   declarations: [
     AppComponent,
     PostsComponent,
-    ProfileComponent
+    ProfileComponent,
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     HttpClientModule,
     CommonModule,
+    
 SharedModule
   ],
   providers: [
