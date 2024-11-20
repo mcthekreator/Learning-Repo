@@ -17,13 +17,14 @@ import { HomeComponent } from './pages/home/home.component';
     AppComponent,
     PostsComponent,
     ProfileComponent,
-    HomeComponent
+    HomeComponent,
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     HttpClientModule,
     CommonModule,
+    
 SharedModule
   ],
   providers: [

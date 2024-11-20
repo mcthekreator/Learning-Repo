@@ -573,3 +573,33 @@ error has occurred during the observable’s execution.
 observable has finished sending values. 
 so after the complete method no futher calls
 like the next and error will be made. 
+
+
+
+
+
+The share operator in RxJS is used to transform a cold observable into a shared observable, 
+which allows multiple subscribers to share a single subscription and 
+It prevents multiple subscriptions from triggering repeated side effects like API calls, timers, or event listeners.
+
+
+looked into some rxjs array methods like the 
+
+1. filter:  values emitted by an observable based on a condition.
+Overusing filter can lead to "silent observables" if no values pass the condition, which might seem like the observable isn't working.
+
+2. reduce: Accumulates all values emitted by the observable into a single value
+reduce only emits once the observable completes. If the observable never completes (e.g., interval), you'll never see a result.
+
+3. scan: Like reduce, but emits the accumulated value for each emission. 
+Unlike reduce, scan doesn't wait for the observable to complete, which might lead to confusion when comparing the two.
+
+4. every: Checks if every value emitted by the observable meets a condition.
+it  completes immediately if a value doesn't satisfy the condition, so subsequent emissions are ignored.
+
+
+ther's 
+1. find 
+2.findIndex 
+3. distinct and distinctUntilChanged
+4. toArray
