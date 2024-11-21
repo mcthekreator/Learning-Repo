@@ -10,12 +10,14 @@ import { CommonModule } from '@angular/common';
 import { PostsComponent } from './components/posts/posts.component';
 import { SharedModule } from './modules/shared.module';
 import { ProfileComponent } from './components/profile/profile.component';
+import { HomeComponent } from './pages/home/home.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     PostsComponent,
     ProfileComponent,
+    HomeComponent,
   ],
   imports: [
     BrowserModule,
