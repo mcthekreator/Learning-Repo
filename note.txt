@@ -603,3 +603,60 @@ ther's
 2.findIndex 
 3. distinct and distinctUntilChanged
 4. toArray
+
+
+
+
+
+
+
+
+so I looked into ngxs yesterfay 
+
+The store 
+which is a global state manager that dispatches actions 
+that the state containers listen to and provides a way 
+to select data slices out from the global state.
+
+
+State:
+which epresents a slice of the application state.
+and is defined using a class with decorators to specify initial values and behavior.
+
+Actions:
+Represent events or operations that modify the state.
+and it is dispatched to trigger state changes.
+
+Selectors:
+Used to query and compute derived state.
+and it provides an efficient way to read state data.
+
+Dispatch:
+which is also a mechanism to trigger actions and update the state.
+which is typically called in services or components.
+
+Middleware:
+whith the middleware also it hooks into the action flow, allowing interception, logging, or transformation.
+
+
+HOW IT WORKS 
+Actions are dispatched through the Store.
+and the middleware processes the actions before the state changes are applied.
+so how the state is updated is that, it uses a mechanism which is called the 
+
+StateContext to interact with the state tree.
+so it provides methods like 
+setState which replaces the entire state with a new state.
+and 
+patchState which also Updates only specific parts of the state by merging new properties into the existing state.
+So the setState and patchState create shallow copies to ensure immutability.
+and the Selectors uses memoization to cache results.
+so they listen for state changes and recompute only when necessary.
+
+There's also plugin intergration like the 
+StoragePlugin which intercept state changes and boardcast them to the desired storage mechanism.
+
+
+also comparing it to ngrx it has a  minimal boilerplate. 
+
+

@@ -29,6 +29,7 @@ export class LoginComponent implements OnInit {
   ngOnInit(): void {
     this.login()
     // this.getAnimal()
+
   }
 
   public login(): void {
@@ -37,6 +38,8 @@ export class LoginComponent implements OnInit {
     this.store.dispatch(new AddAnimal(loginData))
     this.router.navigate(['/home'])
   }
+
+
 
 //   @select(ZooState.getAnimalSelector) getAnimalOb$: Observable<AnimalGet[]>
 //   public getAnimal() {
@@ -47,4 +50,3 @@ export class LoginComponent implements OnInit {
 
 //     })
   }
-
