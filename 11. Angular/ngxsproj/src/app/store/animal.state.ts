@@ -38,8 +38,7 @@ export class ZooState {
 }
 
 
-// @Injectable()
-// export class UserState{
-//     private apiService  inject(ApiService)
-// }
+@Injectable()
+export class UserState{
+}
 
