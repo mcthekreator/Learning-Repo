@@ -607,9 +607,7 @@ ther's
 
 
 
-
-
-
+99
 
 so I looked into ngxs yesterfay 
 
@@ -638,7 +636,6 @@ which is typically called in services or components.
 Middleware:
 whith the middleware also it hooks into the action flow, allowing interception, logging, or transformation.
 
-
 HOW IT WORKS 
 Actions are dispatched through the Store.
 and the middleware processes the actions before the state changes are applied.
@@ -656,7 +653,73 @@ so they listen for state changes and recompute only when necessary.
 There's also plugin intergration like the 
 StoragePlugin which intercept state changes and boardcast them to the desired storage mechanism.
 
-
 also comparing it to ngrx it has a  minimal boilerplate. 
+
+
+
+
+
+
+
+
+
+The express() function is used to create an application instance:
+
+app: The main application object, which is an instance of the Express class. 
+and its  provides methods for configuring the app (like app.use(), app.get(), app.listen()).
+
+Express is built on top of Node.js's HTTP module, but it abstracts much of the complexity of handling HTTP requests. 
+When you call app.listen(), which is basically used to set the port and listen to incoming requests, 
+Express uses the Node.js http.createServer() to start a server that listens for incoming requests.
+
+
+Middlewares are one of the key concepts in express
+
+one interesting thing was the middleware pipeline
+So their are functions that receive the request (req), 
+the response (res), 
+and the next function (next) to pass control to the next middleware function in the stack.
+So express processes middleware functions in the order in which they are defined.
+
+which means that each incoming request passes through each middleware in the order they were defined, 
+with each middleware modifys the request and response objects or terminating the cycle.
+
+
+a. Types of Middleware
+Global Middleware: which is defined using app.use() method and it runs all requests, regardless of the route or HTTP method.
+Route-Specific Middleware: Middleware can also be applied to specific routes:
+Error Handling Middleware: Express supports a special kind of middleware to handle errors. It has four arguments (err, req, res, next):
+
+Express comes with several built-in middleware functions:
+express.static(): Serves static files.
+express.json(): Parses incoming JSON requests.
+express.urlencoded(): Parses incoming form data.
+
+Third-Party Middleware
+Express supports third-party middleware that can be installed via npm:
+body-parser: Parses incoming request bodies.
+morgan: HTTP request logger middleware.
+
+
+
+Routing
+Once a request has passed through the middleware, it is routed to the appropriate route handler.
+
+Express uses a router to map incoming HTTP requests to route handlers. 
+so the router checks the method (GET, POST, etc.) and the request URL to find the appropriate handler.
+
+and then internally too express uses a routing table (often implemented using a map or tree structure) 
+to match the incoming request method and URL path against registered routes
+
+
+Express allows dynamic routing by using route parameters and query strings:
+
+Route Parameters: These are part of the URL (e.g., /users/:id) and are accessible via req.params.
+Query Parameters: These are part of the URL query string (e.g., /search?name=John) and are accessible via req.query.
+e. Route Handling Order
+Express evaluates routes in the order they are defined in the code. If no matching route is found, the 404 handler is triggered.
+
+
+
 
 

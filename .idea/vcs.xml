@@ -2,6 +2,8 @@
 <project version="4">
   <component name="VcsDirectoryMappings">
     <mapping directory="" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/05. React/frontend-quiz-app" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/05. React/frontend-quiz-app/nodejs" vcs="Git" />
     <mapping directory="$PROJECT_DIR$/13. Nest/first-nest-proj" vcs="Git" />
   </component>
 </project>
