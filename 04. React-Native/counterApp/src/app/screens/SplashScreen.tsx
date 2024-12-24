@@ -4,7 +4,7 @@ import React from 'react'
 export default function SplashScreen() {
   return (
     <ScrollView style={style.splashscreen}>
-      <Text>SplashScreen</Text>
+      <Text>Welcome</Text>
     </ScrollView>
   ) 
 }  
