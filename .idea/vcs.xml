@@ -2,7 +2,5 @@
 <project version="4">
   <component name="VcsDirectoryMappings">
     <mapping directory="" vcs="Git" />
-    <mapping directory="$PROJECT_DIR$/React/frontend-quiz-app" vcs="Git" />
-    <mapping directory="$PROJECT_DIR$/React/frontend-quiz-app/nodejs" vcs="Git" />
   </component>
 </project>

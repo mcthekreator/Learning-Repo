@@ -3,12 +3,10 @@ var firstName;
 let middleName;
 //NB const variable without initialized is not allowed
 
-
 // initializing a variable
 var firstName = "paul";
 let middleName = "Daniel";
 const lastName = "Thomas"
-
 
 // Primitive Data Types (String, Number, Boolean, undefined, null)
 let name = "paul"; // (string literal)
@@ -38,10 +36,8 @@ person.age = 50; // reassigning value of object
 person["name"] = "Derrick";
 console.log(person["age"]);
 
-
 //ARRAYS
 let selectedColors = ["red", "blue"];
-
 
 // FUNCTION  (set of statement that perform a specific task)
 
