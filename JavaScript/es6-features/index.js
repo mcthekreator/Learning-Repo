@@ -1,9 +1,9 @@
 // All javascript es6 features
 //Let and const declarations
 //Arrow functions
-//Template litrerals
+//Template literals
 //Destructing Assignments
-//Spead and Rest Operator
+//Speed and Rest Operator
 //classes
 //Promises
 //Modules
