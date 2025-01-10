@@ -8,4 +8,4 @@
 //Promises
 //Modules
 //default Parameters
-//Enchanced Object Leiteral syntax
+//Enchanced Object Literal syntax
