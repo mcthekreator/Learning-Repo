@@ -1,6 +1,7 @@
 export interface StudentsRecords{
     name: string,
     city: string,
-    country: string
+    country: string,
+    subject: string
 
 }
