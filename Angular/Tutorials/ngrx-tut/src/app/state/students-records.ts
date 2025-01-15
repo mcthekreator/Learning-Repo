@@ -4,6 +4,7 @@ export interface StudentsRecords{
     country: string,
     subject: string,
     passportDeclaration: string,
+    fitnessDeclaration: string,
 
 
 }
