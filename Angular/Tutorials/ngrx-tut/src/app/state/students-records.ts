@@ -3,7 +3,7 @@ export interface StudentsRecords{
     city: string,
     country: string,
     subject: string,
-    passportDelaration: string,
-    
+    passportDeclaration: string,
+
 
 }
