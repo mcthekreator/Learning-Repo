@@ -5,6 +5,8 @@ export interface StudentsRecords{
     subject: string,
     passportDeclaration: string,
     fitnessDeclaration: string,
+    courseName: string,
+    
 
 
 }
