@@ -7,6 +7,8 @@ export interface StudentsRecords{
     fitnessDeclaration: string,
     courseName: string,
     date: string,
+    state: string,
+    
 
 
 }
