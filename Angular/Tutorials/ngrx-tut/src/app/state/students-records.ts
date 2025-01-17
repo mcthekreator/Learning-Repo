@@ -8,7 +8,9 @@ export interface StudentsRecords{
     courseName: string,
     date: string,
     state: string,
+    subjects: string,
     
+
 
 
 }
