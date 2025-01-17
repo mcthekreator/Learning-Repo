@@ -12,6 +12,6 @@ export interface StudentsRecords{
     streets: string,
     email: string
     phone: string
-
+    postalCode: number
 
 }
