@@ -9,6 +9,7 @@ export interface StudentsRecords{
     date: string,
     state: string,
     subjects: string,
+    streets: string,
     
 
 
