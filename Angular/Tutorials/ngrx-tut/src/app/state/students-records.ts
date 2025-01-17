@@ -10,7 +10,7 @@ export interface StudentsRecords{
     state: string,
     subjects: string,
     streets: string,
-    
+    email: string
 
 
 
