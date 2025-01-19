@@ -6,6 +6,6 @@ export const initState: ReadonlyArray<StudentsRecords> = [
         city: "Accra",
         subject: "Python programing",
         passportDeclaration: "Yes",
-        
+        fitnessDeclaration: "Yes",
     }
 ]
