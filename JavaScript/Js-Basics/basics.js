@@ -64,8 +64,9 @@ utility to resolve the circular dependency.
 
     2. Another way to resolve circular dependencies is by using the ModuleRef class,
 which allows you to manually retrieve a provider instance from the Dependency Injection (DI) container.
-    This method involves decoupling the direct injection of the service and using ModuleRef to get the instance
-when needed. It's a bit more complex but provides more control over the DI process.
+    and it involves decoupling the direct injection of the service and using ModuleRef to get the instance
+when needed. nest actually define this to be a bit more comeplex but provides more control over the DI process.
+
 
 
 import { ModuleRef } from '@nestjs/core';
