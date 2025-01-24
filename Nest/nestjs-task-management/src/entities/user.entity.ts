@@ -1,34 +1,30 @@
-import { Exclude, Expose } from "class-transformer";    
+import { Exclude, Expose } from 'class-transformer';
 
-export class UserEntity{
-    id : number;
-    firstName : string; 
-    lastName : string;
-    email : string; 
+export class UserEntity {
+  id: number;
+  firstName: string;
+  lastName: string;
+  email: string;
 
-    birthday: Date;
+  birthday: Date;
 
+  @Exclude()
+  password: string;
 
-    @Exclude()
-    password : string;
+  @Expose()
+  get fullName(): string {
+    return `${this.firstName} ${this.lastName}`;
+  }
 
-    @Expose()
-    get fullName(): string{
-        return `${this.firstName} ${this.lastName}`
-    }
+  @Expose()
+  get age(): Number {
+    const difference = Date.now() - this.birthday.getTime();
+    const age_difference = new Date(difference);
 
-    @Expose()
-    get age (): Number{ 
-        const difference = Date.now() - this.birthday.getTime();
-        const age_difference = new Date(difference);  
-        
-        return Math.abs(age_difference.getUTCFullYear() - 1970);
-    }
+    return Math.abs(age_difference.getUTCFullYear() - 1970);
+  }
 
-
-
-    constructor (partial: Partial<UserEntity>){
-        Object.assign(this, partial )
-            
-    }
+  constructor(partial: Partial<UserEntity>) {
+    Object.assign(this, partial);
+  }
 }

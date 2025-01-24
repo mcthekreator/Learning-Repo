@@ -20,7 +20,7 @@ let selectedColor = null;//
 // OBJECTS (collection of key value pairs)
 
 // Object syntax
-let person = {
+let person = { 
     name: "paul",
     age: 30,
 };
@@ -53,7 +53,7 @@ circular dependancy happens when one class depends on another class and this can
 happen between providers and modules, which can eventual make the dpendancy inject system fail
 because the necessary metadata for the classess or modules wont be avaliable at the time of instabtiation
 
-There are ways where circular depensancy can be resolve and its by using
+Nest provides ways where circular depensancy can be resolve and its by using
 1. uisng the forwardRef() ultility from the nestjs/common package
 and how it work is that, by using the forwardRef(), it delays the resolution of a
 provider until both sides of the depenancy relationships are avaliable. A forward
@@ -64,7 +64,7 @@ utility to resolve the circular dependency.
 
     2. Another way to resolve circular dependencies is by using the ModuleRef class,
 which allows you to manually retrieve a provider instance from the Dependency Injection (DI) container.
-    and it involves decoupling the direct injection of the service and using ModuleRef to get the instance
+    with thus one involves decoupling the direct injection of the service and using ModuleRef to get the instance
 when needed. nest actually define this to be a bit more comeplex but provides more control over the DI process.
 
 
