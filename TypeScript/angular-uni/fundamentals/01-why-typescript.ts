@@ -1,5 +1,5 @@
 
-const lessonName = "Typescript bootcam";
+const lessonName = "Typescript bootcamp";
 
 PrintCourseName(lessonName);
 
