@@ -1,6 +1,6 @@
 //Declaring a Variable
 var firstName;
-let middleName;
+// let middleName;
 //NB const variable without initialized is not allowed
 
 // initializing a variable

@@ -1,7 +1,7 @@
 
-const newCourseName = "Typescript bootcamp";
+const lessonName = "Typescript bootcamp";
 
-PrintCourseName(newCourseName);
+PrintCourseName(lessonName);
 
 function PrintCourseName(name: string) {
   console.log(`Course Name: ${name}`);
