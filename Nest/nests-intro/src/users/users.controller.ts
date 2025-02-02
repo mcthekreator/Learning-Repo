@@ -2,7 +2,7 @@ import { Controller, Get, Post, Patch, Put, Delete } from '@nestjs/common';
 
 @Controller('users')
 export class UsersController {
-    @Get('/:id')
+    @Get('/:id/:optional?')
     public getUsers(){
         return 'Get users';
     }
