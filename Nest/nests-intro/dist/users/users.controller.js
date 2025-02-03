@@ -17,6 +17,7 @@ const common_1 = require("@nestjs/common");
 let UsersController = class UsersController {
     getUsers(params, query) {
         console.log(params);
+        console.log(query);
         return 'Get users';
     }
     createUsers() {

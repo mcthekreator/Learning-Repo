@@ -6,6 +6,7 @@ export class UsersController {
     @Get('/:id/:optional?')
     public getUsers(@Param() params:any, @Query() query:any){
         console.log(params);
+        console.log(query);
         
         return 'Get users';
     }
