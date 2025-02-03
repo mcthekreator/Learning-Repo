@@ -1,4 +1,4 @@
 export declare class UsersController {
-    getUsers(params: any): string;
+    getUsers(params: any, query: any): string;
     createUsers(): string;
 }

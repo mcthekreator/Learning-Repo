@@ -14,10 +14,9 @@ var __param = (this && this.__param) || function (paramIndex, decorator) {
 Object.defineProperty(exports, "__esModule", { value: true });
 exports.UsersController = void 0;
 const common_1 = require("@nestjs/common");
-const console_1 = require("console");
 let UsersController = class UsersController {
-    getUsers(params) {
-        console_1.log;
+    getUsers(params, query) {
+        console.log(params);
         return 'Get users';
     }
     createUsers() {
@@ -28,8 +27,9 @@ exports.UsersController = UsersController;
 __decorate([
     (0, common_1.Get)('/:id/:optional?'),
     __param(0, (0, common_1.Param)()),
+    __param(1, (0, common_1.Query)()),
     __metadata("design:type", Function),
-    __metadata("design:paramtypes", [Object]),
+    __metadata("design:paramtypes", [Object, Object]),
     __metadata("design:returntype", void 0)
 ], UsersController.prototype, "getUsers", null);
 __decorate([
