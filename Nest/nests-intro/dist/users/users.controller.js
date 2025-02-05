@@ -20,7 +20,8 @@ let UsersController = class UsersController {
         console.log(query);
         return 'Get users';
     }
-    createUsers() {
+    createUsers(request) {
+        console.log(request);
         return "you send a post request to this endpoint";
     }
 };
@@ -35,8 +36,9 @@ __decorate([
 ], UsersController.prototype, "getUsers", null);
 __decorate([
     (0, common_1.Post)(),
+    __param(0, (0, common_1.Body)()),
     __metadata("design:type", Function),
-    __metadata("design:paramtypes", []),
+    __metadata("design:paramtypes", [Object]),
     __metadata("design:returntype", void 0)
 ], UsersController.prototype, "createUsers", null);
 exports.UsersController = UsersController = __decorate([
