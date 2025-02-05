@@ -7,6 +7,8 @@ import {Observable} from 'rxjs'
 })
 export class UserService {
 
+    public baseUrl = ""
+
     constructor(private http: HttpClient ){}
 
     public getData():Observable <any>{
