@@ -8,6 +8,10 @@ export const initState: ReadonlyArray<StudentsRecords> = [
         passportDeclaration: "Yes",
         fitnessDeclaration: "Yes",
         courseName: "Computer Science",
+        date: "23/09/2020",
         
+
+
+
     }
 ]
