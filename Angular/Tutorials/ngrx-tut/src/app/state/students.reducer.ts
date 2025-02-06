@@ -9,6 +9,7 @@ export const initState: ReadonlyArray<StudentsRecords> = [
         fitnessDeclaration: "Yes",
         courseName: "Computer Science",
         date: "23/09/2020",
+        state: "Greater Accra",
         
 
 
