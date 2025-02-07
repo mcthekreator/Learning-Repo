@@ -11,7 +11,8 @@ export const initState: ReadonlyArray<StudentsRecords> = [
         date: "23/09/2020",
         state: "Greater Accra",
         subjects: "a lots",
-        streets: "turblence"
+        streets: "turblence",
+        email: "example2mail.com",
 
         
 
