@@ -13,6 +13,8 @@ export const initState: ReadonlyArray<StudentsRecords> = [
         subjects: "a lots",
         streets: "turblence",
         email: "example2mail.com",
+        phone: "203934034940",
+        postalCode:172728,
 
         
 
