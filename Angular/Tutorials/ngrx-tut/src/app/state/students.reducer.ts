@@ -9,17 +9,12 @@ export const initState: ReadonlyArray<StudentsRecords> = [
         passportDeclaration: "Yes",
         fitnessDeclaration: "Yes",
         courseName: "Computer Science",
-        date: "23/09/2020",
+        date: "23-09-20",
         state: "Greater Accra",
-        subjects: "a lots",
+        subjects: "Software",
         streets: "turblence",
         email: "example2mail.com",
         phone: "203934034940",
         postalCode:172728,
-
-        
-
-
-
     }
 ]
