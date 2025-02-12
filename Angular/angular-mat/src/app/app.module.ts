@@ -5,7 +5,11 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { provideAnimationsAsync } from '@angular/platform-browser/animations/async';
 import {MatSliderModule} from '@angular/material/slider';
-
+import {MatSidenavModule} from '@angular/material/sidenav'
+import {MatButtonModule} from '@angular/material/button';
+import { MatSlideToggleModule } from '@angular/material/slide-toggle';
+import {MatStepperModule} from '@angular/material/stepper';
+import { ReactiveFormsModule } from '@angular/forms';
 @NgModule({
   declarations: [
     AppComponent
@@ -13,7 +17,14 @@ import {MatSliderModule} from '@angular/material/slider';
   imports: [
     BrowserModule,
     AppRoutingModule,
-    MatSliderModule
+    MatSliderModule,
+    MatSidenavModule,
+    MatButtonModule,
+    MatSlideToggleModule,
+    MatStepperModule,
+    ReactiveFormsModule
+
+    
     
   ],
   providers: [

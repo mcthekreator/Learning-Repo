@@ -2,18 +2,38 @@
 // Custom Theming for Angular Material
 // For more information: https://material.angular.io/guide/theming
 @use '@angular/material' as mat;
+@import "./app//themes/orangetheme.css";
 
-html {
-  @include mat.theme((
-    color: (
-      theme-type: light,
-      primary: mat.$azure-palette,
-      tertiary: mat.$blue-palette,
-    ),
-    typography: Roboto,
-    density: 0,
-  ));
-}/* You can add global styles to this file, and also import other style files */
+// html {
+//   @include mat.theme((
+//     color: (
+//       theme-type: light,
+//       primary: mat.$azure-palette,
+//       tertiary: mat.$blue-palette,
+//     ),
+//     typography: Roboto,
+//     density: 0,
+//   ));
+// }/* You can add global styles to this file, and also import other style files */
 
 html, body { height: 100%; }
 body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
+
+
+// modifies project configuration 
+// 1. added selected theme to styles array in  angular.json file 
+// 2. added selected theme and typograpy configuration the global css file
+
+// use componenets like 
+// cards 
+// docs provide some of thhe preset element tat can be used in the mat-c ard element 
+//eg: mat-card-header, mat-card-content, mat-card-imgage, mat-card-actions, mat-card-footer 
+
+//and evven with the  mat-card-header the docs provides another preset elemnent tat can be nessted in them 
+//mat-card-content, we can use the mat-card-title and mat-card-subtitle to add title and subtitle to the card
+
+
+//also looked into buttons and some button attributes 
+//eg: mat-flat-button, mat-icon-button, mat-stroked-button etc
+
+
