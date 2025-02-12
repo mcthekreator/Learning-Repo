@@ -3,7 +3,7 @@
   "version": 1,
   "newProjectRoot": "projects",
   "projects": {
-    "angular-docs": {
+    "angualr-docs": {
       "projectType": "application",
       "schematics": {
         "@schematics/angular:component": {
@@ -17,7 +17,7 @@
         "build": {
           "builder": "@angular-devkit/build-angular:application",
           "options": {
-            "outputPath": "dist/angular-docs",
+            "outputPath": "dist/angualr-docs",
             "index": "src/index.html",
             "browser": "src/main.ts",
             "polyfills": [
@@ -64,10 +64,10 @@
           "builder": "@angular-devkit/build-angular:dev-server",
           "configurations": {
             "production": {
-              "buildTarget": "angular-docs:build:production"
+              "buildTarget": "angualr-docs:build:production"
             },
             "development": {
-              "buildTarget": "angular-docs:build:development"
+              "buildTarget": "angualr-docs:build:development"
             }
           },
           "defaultConfiguration": "development"
@@ -100,7 +100,7 @@
     }
   },
   "cli": {
-    "analytics": "15c5951d-93f1-42fe-858a-c3db3227d3e8",
+    "analytics": "4f294e37-05bc-42ef-91c6-b2b48ca8eb30",
     "packageManager": "yarn"
   }
 }
