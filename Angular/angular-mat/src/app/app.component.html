@@ -1,19 +1,15 @@
-<mat-slide-toggle>Toggle me!</mat-slide-toggle>
-<form>
-  <mat-stepper formArrayName="formArray" linear>
-    <mat-step formGroupName="0" [stepControl]="formArray.get([0])">
-      ...
-      <div>
-        <button mat-button matStepperNext type="button">Next</button>
-      </div>
-    </mat-step>
-    <mat-step formGroupName="1" [stepControl]="formArray.get([1])">
-      ...
-      <div>
-        <button mat-button matStepperPrevious type="button">Back</button>
-        <button mat-button matStepperNext type="button">Next</button>
-      </div>
-    </mat-step>
-    ...
-  </mat-stepper>
-</form> 
+<div class="example-container">
+  <mat-form-field hintLabel="Max 10 characters">
+    <mat-label>Enter some input</mat-label>
+    <input matInput #input maxlength="10" placeholder="Ex. Nougat" />
+    <mat-hint align="end"></mat-hint>
+  </mat-form-field>
+
+  <mat-form-field>
+    <mat-label>Select me</mat-label>
+    <mat-select>
+      <mat-option value="option">Option</mat-option>
+    </mat-select>
+    <mat-hint align="end">Here's the dropdown arrow ^</mat-hint>
+  </mat-form-field>
+</div>
