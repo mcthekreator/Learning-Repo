@@ -1,8 +1,8 @@
 //assigment operator
-let num = 
+let num = 100
 
 //comparison operator
-if(name ==== "emma"){
+if(num === 100){
     console.log('comparison operator sucessfu');
     
 }
