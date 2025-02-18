@@ -1,4 +1,8 @@
 //assigment operator
-let name = " emma"
+let num = 
 
-//comparison operator 
+//comparison operator
+if(name ==== "emma"){
+    console.log('comparison operator sucessfu');
+    
+}
