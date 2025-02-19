@@ -20,3 +20,9 @@
 //2. Array
 //3. Functions
 
+
+//String methods
+
+ const greeting = " Hello World"
+result = greeting.concat("!", " ", "How are you?", greeting);
+console.log(result);
