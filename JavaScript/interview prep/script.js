@@ -26,5 +26,6 @@
  const greeting = " Hello World"
 result = greeting.concat("!", " ", "How are you?", greeting);
 console.log(result);
-result2 = greeting.substring(0, 1);
+greeting.trim();
+result2 = greeting.substring(0, 2);
 console.log(result2);
