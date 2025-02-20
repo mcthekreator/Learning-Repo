@@ -23,7 +23,7 @@
 
 //String methods
 
- const greeting = "Hello World daniel"
+ const greeting = "Hello World"
 result = greeting.concat("!", " ", "How are you?", greeting);
 console.log(result);
 result2 = greeting.substring(0, 3);
