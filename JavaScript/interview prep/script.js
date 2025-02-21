@@ -36,3 +36,13 @@ result5 = greeting.replace("Hello", "Hi");
 console.log(result5);
 result6 = greeting.trim();
 console.log(result6);
+
+
+
+
+
+//Array methods
+
+const numbers = [1, 2, 3, 4, 5];
+result = numbers.push(6);
+console.log(result);
