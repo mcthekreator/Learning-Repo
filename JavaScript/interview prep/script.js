@@ -48,3 +48,6 @@ const numbers = [1, 2, 3, 4, 5];
 result = numbers.push(6);
 console.log(result);
 result2 = numbers.pop();
+console.log(result2);
+result3 = numbers.unshift(0);
+console.log(result3);
