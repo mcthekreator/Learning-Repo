@@ -23,19 +23,20 @@
 
 //String methods
 
- const greeting = " Hello World"
-result = greeting.concat("!", " ", "How are you?", greeting);
-console.log(result);
-result2 = greeting.substring(0, 3);
-console.log(result2);
-result3 = greeting.slice(0, 3);
-console.log(result3);
-result4 = greeting.split(" ");
-console.log(result4);
-result5 = greeting.replace("Hello", "Hi");
-console.log(result5);
-result6 = greeting.trim();
-console.log(result6);
+//  const greeting = " Hello World"
+// result = greeting.concat("!", " ", "How are you?", greeting);
+// console.log(result);
+// result2 = greeting.substring(0, 3);
+// console.log(result2);
+// result3 = greeting.slice(0, 3);
+// console.log(result3);
+// result4 = greeting.split(" ");
+// console.log(result4);
+// result5 = greeting.replace("Hello", "Hi");
+// console.log(result5);
+// result6 = greeting.trim();
+// console.log(result6);
+
 
 
 
@@ -46,3 +47,4 @@ console.log(result6);
 const numbers = [1, 2, 3, 4, 5];
 result = numbers.push(6);
 console.log(result);
+result2 = numbers.pop();
