@@ -51,3 +51,5 @@ const numbers = [1, 2, 3, 4, 5,6];
 // console.log(result2);
 result3 = numbers.unshift();
 console.log(result3);
+result4 = numbers.shift();
+console.log(result4);
