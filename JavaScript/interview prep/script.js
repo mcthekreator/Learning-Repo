@@ -53,3 +53,6 @@ result3 = numbers.unshift();
 console.log(result3);
 result4 = numbers.shift();
 console.log(result4);
+result5 = numbers.filter(function(num){
+    return num > 2;
+})
