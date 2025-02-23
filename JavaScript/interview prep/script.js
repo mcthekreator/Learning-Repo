@@ -56,5 +56,6 @@ console.log(result4);
 result5 = numbers.filter(function(num){
     return num > 2;
 })
+console.log(result5);
 let sum = numbers.reduce((acc, num) => acc + num, 0);
-console.log(result5, sum);
+console.log( sum);
