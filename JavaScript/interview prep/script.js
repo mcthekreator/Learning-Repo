@@ -7,3 +7,4 @@ const users = [
 ];
 
 //  How would you extract the first name of the second user in the list?
+`const secondUserFirstName = users[1].firstname; console.log(secondUserFirstName); // Output: "Daniel"`
