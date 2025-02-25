@@ -11,3 +11,5 @@ const secondUserFirstName = users[1].firstname;
 console.log(secondUserFirstName);
 
 //How would you find the total number of users in the array?
+
+`const totalUsers = users.length; console.log(totalUsers);
