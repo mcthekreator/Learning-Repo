@@ -10,4 +10,4 @@ const users = [
 const secondUserFirstName = users[1].firstname;
 console.log(secondUserFirstName);
 
-**Q:** How would you find the total number of users in the array?
+//How would you find the total number of users in the array?
