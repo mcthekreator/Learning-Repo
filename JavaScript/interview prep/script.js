@@ -14,3 +14,5 @@ console.log(secondUserFirstName);
 
 const totalUsers = users.length; 
 console.log(totalUsers);
+
+How would you retrieve an array of all the first names of the users?
