@@ -16,5 +16,5 @@ const totalUsers = users.length;
 console.log(totalUsers);
 
 //How would you retrieve an array of all the first names of the users?
-const firstNames = users.map(user => user[2].firstname == "John"); 
+const firstNames = users.map(user => user.firstname); 
 console.log(firstNames); 
