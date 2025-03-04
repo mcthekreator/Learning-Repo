@@ -11,6 +11,6 @@ export class UserService {
     constructor(private http: HttpClient ){}
 
     public getData():Observable <any>{
-        return this.http.get("")
+        return this.http.get(`${this.baseUrl}`)
     }
 }
