@@ -7,10 +7,10 @@ import {Observable} from 'rxjs'
 })
 export class UserService {
 
-    public baseUrl = ""
+    public baseUrl = "https://dummyjson.com/products"
     constructor(private http: HttpClient ){}
 
     public getData():Observable <any>{
-        return this.http.get("https://dummyjson.com/products")
+        return this.http.get("")
     }
 }
