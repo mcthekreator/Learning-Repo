@@ -2,7 +2,6 @@ const userForm = document.querySelectorAll("form");
 const tableSearch = document.getElementById('table-search')
 const tbody = document.querySelectorAll("tbody")
 
-
 for (let index = 0; index < userForm.length; index++) {
     const element = userForm[index];
     const caution = element.querySelector('p')
