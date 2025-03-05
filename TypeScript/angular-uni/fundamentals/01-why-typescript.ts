@@ -1,4 +1,3 @@
-
 const lessonName = "Typescript bootcamp";
 PrintCourseName(lessonName);
 
