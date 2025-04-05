@@ -10,7 +10,5 @@ export class HeaderComponent {
 
    protected increaseCount() {
     this.count.update((prev) => prev + 1);
-   }
-
- 
+   } 
 }
