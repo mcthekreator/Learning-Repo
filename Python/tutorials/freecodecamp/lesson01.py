@@ -57,7 +57,7 @@ print(isinstance(pizza, str))
 # String Method
 print(first)
 print(first.lower())
-print(first.upper())
+print(first.upper())    
 print(first)
 
 print(first.title())
