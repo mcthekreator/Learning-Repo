@@ -6,3 +6,6 @@ console.log("TypeScript is developed and maintained by Microsoft.");
 console.log("TypeScript is open-source.");
 console.log("TypeScript is used for large-scale applications.");
 console.log("TypeScript is used by many companies.");
+console.log("TypeScript is used by many developers.");
+console.log("TypeScript is used for front-end and back-end development.");
+console.log("TypeScript is used for web development.");
