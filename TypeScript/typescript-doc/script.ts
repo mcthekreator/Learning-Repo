@@ -9,3 +9,5 @@ console.log("TypeScript is used by many companies.");
 console.log("TypeScript is used by many developers.");
 console.log("TypeScript is used for front-end and back-end development.");
 console.log("TypeScript is used for web development.");
+console.log("TypeScript is used for mobile development.");
+console.log("TypeScript is used for desktop development.");
