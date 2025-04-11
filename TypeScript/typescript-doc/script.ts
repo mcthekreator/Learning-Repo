@@ -11,3 +11,7 @@ console.log("TypeScript is used for front-end and back-end development.");
 console.log("TypeScript is used for web development.");
 console.log("TypeScript is used for mobile development.");
 console.log("TypeScript is used for desktop development.");
+console.log("TypeScript is used for server-side development.");
+console.log("TypeScript is used for cloud development.");
+console.log("TypeScript is used for game development.");
+console.log("TypeScript is used for data science.");
