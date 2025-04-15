@@ -9,3 +9,4 @@ that spans multiple lines.
 This is a long message
 
 """
+print(message)
