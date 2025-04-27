@@ -1,2 +1,6 @@
+# naming variables
 greeting = "helo world"
-print(greeting)
+first_name = "dave"
+user1 = "first user"
+
+
