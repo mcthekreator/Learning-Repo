@@ -28,3 +28,12 @@ meaning /= 2
 print(meaning)
 meaning = round(meaning)
 print(meaning)
+
+# comparision operators
+print(43 == 43)
+print(43 == 42)
+print(43 != 43)
+print(43 > 42)
+print(43 < 43)
+print(43 >= 42)
+print(43 <= 43)
