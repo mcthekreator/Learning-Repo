@@ -20,3 +20,5 @@ print(2 ** 3)
 meaning = 42
 meaning += 1
 print(meaning)
+meaning -= 2
+print(meaning)
