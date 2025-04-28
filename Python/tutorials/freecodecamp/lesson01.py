@@ -24,3 +24,5 @@ meaning -= 2
 print(meaning)
 meaning *= 2
 print(meaning)
+meaning /= 2
+print(meaning)
