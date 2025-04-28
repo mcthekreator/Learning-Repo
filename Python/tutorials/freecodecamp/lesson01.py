@@ -16,4 +16,7 @@ print(2 ** 3)
 
 
 
-#
+#combing assignment and arithmetic operator
+meaning = 42
+meaning += 1
+print(meaning)
