@@ -52,6 +52,6 @@ print(isinstance(first, str))
 
 # constructor function
 pizza = str("pepperoni")
-print(type(first))
-print(type(last) == str)
-print(isinstance(first, str))
+print(type(pizza))
+print(type(pizza) == str)
+print(isinstance(pizza, str))
