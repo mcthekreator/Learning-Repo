@@ -48,3 +48,4 @@ first = "Dave"
 last = "Smith"
 print(type(first))
 print(type(last) == str)
+print(isinstance(first, str))
