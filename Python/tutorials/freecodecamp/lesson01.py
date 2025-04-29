@@ -49,3 +49,7 @@ last = "Smith"
 print(type(first))
 print(type(last) == str)
 print(isinstance(first, str))
+
+# constructor function
+pizza = str("pepperoni")
+
