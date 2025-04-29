@@ -46,3 +46,4 @@ print(43 <= 43)
 #literial assignment
 first = "Dave"
 last = "Smith"
+print(type(first))
