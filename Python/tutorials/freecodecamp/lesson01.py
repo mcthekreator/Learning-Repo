@@ -47,3 +47,4 @@ print(43 <= 43)
 first = "Dave"
 last = "Smith"
 print(type(first))
+print(type(last) == str)
