@@ -61,4 +61,5 @@ print(first.upper())
 print(first)
 
 print(first.title())
+print(first.capitalize())
 
