@@ -62,4 +62,5 @@ print(first)
 
 print(first.title())
 print(first.capitalize())
+print(first.replace("Dave", "Smith"))
 
