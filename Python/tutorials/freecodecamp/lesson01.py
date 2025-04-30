@@ -38,9 +38,6 @@ print(43 < 43)
 print(43 >= 42)
 print(43 <= 43)
 
-
-
-
 # string datatype
 
 #literial assignment
@@ -55,3 +52,7 @@ pizza = str("pepperoni")
 print(type(pizza))
 print(type(pizza) == str)
 print(isinstance(pizza, str))
+
+
+# String Method
+print(first)
