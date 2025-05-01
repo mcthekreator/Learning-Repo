@@ -65,4 +65,6 @@ print(first.capitalize())
 print(first.replace("Dave", "Smith"))
 
 print(len(first))
-
+first += "                                 "
+first = "                    " + first
+print(len(first))
